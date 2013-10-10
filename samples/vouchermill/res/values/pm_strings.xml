@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- ELV -->
+    <string name="pm_elv_account_number_label">Account</string>
+    <string name="pm_elv_account_number_hint">Account number</string>
+    <string name="pm_elv_bank_code_label">Bank</string>
+    <string name="pm_elv_bank_code_hint">Bank code</string>
+    <string name="pm_elv_account_holder_label">Holder</string>
+    <string name="pm_elv_account_holder_hint">Account holder</string>
+    <string name="pm_elv_trigger_btn_default">@string/pm_trigger_default</string>
+    <!-- Credit Card -->
+    <string name="pm_cc_number_label">Credit Card</string>
+    <string name="pm_cc_number_hint">Card Number</string>
+    <string name="pm_cc_expdate_label">Expiration Date</string>
+    <string name="pm_cc_date_hint">MM/YY</string>
+    <string name="pm_cc_date_separator">/</string>
+    <string name="pm_cc_verification_label">Verification number</string>
+    <string name="pm_cc_verification_hint">CVC</string>
+    <string name="pm_cc_holder_name_hint">Card holder</string>
+    <string name="pm_cc_holder_name_label">Card holder</string>
+    <string name="pm_cc_trigger_btn_default">@string/pm_trigger_default</string>
+    <!-- Main / Shared -->
+    <string name="pm_dateExpiredMSG">Card expired</string>
+    <string name="pm_badCardFormatMSG">Card number not valid</string>
+    <string name="pm_emptyMSG">Field cannot be empty</string>
+    <string name="pm_notAllowedCardMSG">Card type is not supported</string>
+    <string name="pm_credit_card_button">Credit Card</string>
+    <string name="pm_elv_button">Direct Debit</string>
+    <string name="pm_trigger_payment">Pay</string>
+    <string name="pm_trigger_preauth">Authorize</string>
+    <string name="pm_trigger_default">Pay</string>
+
+</resources>

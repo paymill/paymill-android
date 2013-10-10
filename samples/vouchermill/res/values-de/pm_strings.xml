@@ -1,0 +1,33 @@
+<resources>
+	<!-- ELV -->
+    <string name="pm_elv_account_number_label">Kontonummer</string>
+    <string name="pm_elv_account_number_hint">Kontonummer</string>
+    <string name="pm_elv_bank_code_label">BLZ</string>
+    <string name="pm_elv_bank_code_hint">BLZ</string>
+	<string name="pm_elv_account_holder_label">Kontoinhaber</string>
+	<string name="pm_elv_account_holder_hint">Kontoinhaber</string>
+	<string name="pm_elv_trigger_btn_default">@string/pm_trigger_default</string>
+	<!-- Credit Card -->
+    <string name="pm_cc_number_label">Kreditkarte</string>
+    <string name="pm_cc_number_hint">Kartennummer</string>
+	<string name="pm_cc_expdate_label">Ablaufdatum</string>
+    <string name="pm_cc_month_hint">MM</string>
+    <string name="pm_cc_year_hint">YY</string>
+    <string name="pm_cc_date_separator">/</string>
+    <string name="pm_cc_verification_label">Prüfnummer</string>
+    <string name="pm_cc_verification_hint">CVC</string>
+    <string name="pm_cc_holder_name_hint">Karteninhaber</string>
+    <string name="pm_cc_holder_name_label">Karteninhaber</string>
+    <string name="pm_cc_trigger_btn_default">@string/pm_trigger_default</string>
+	<!-- Main / Shared -->
+	<string name="pm_dateExpiredMSG">Karte ist abgelaufen</string>
+    <string name="pm_badCardFormatMSG">Ungültige Kartennummer</string>
+    <string name="pm_emptyMSG">Feld darf nicht leer sein</string>
+	
+    <string name="pm_credit_card_button">Kreditkarte</string>
+    <string name="pm_elv_button">ELV</string>
+	
+	<string name="pm_trigger_payment">Bezahlen</string>
+	<string name="pm_trigger_preauth">Autorisieren</string>
+	<string name="pm_trigger_default">Bezahlen</string>
+</resources>

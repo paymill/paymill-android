@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:editText="http://schemas.android.com/apk/res/com.paymill.android.samples.vouchermill"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/screensMargin" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/loginWithTestAccountButton"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/screensMargin"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/loginButtonWithTestAccount"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/loginPublicKey"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <com.paymill.android.payment.CustomEditText
+            android:id="@+id/publicKeyText"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/screensMargin"
+            android:ems="10"
+            android:hint="@string/publicKeyHint"
+            android:inputType="text" >
+
+            <requestFocus />
+        </com.paymill.android.payment.CustomEditText>
+
+        <RadioGroup
+            android:id="@+id/liveTestGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/liveButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_button_selector_left"
+                android:text="@string/liveButton"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/testButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:background="@drawable/radio_button_selector_right"
+                android:text="@string/testButton"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/loginButton"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tokenWithParamsButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/tokenWithParamsButton"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</ScrollView>

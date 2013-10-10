@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/buyVoucherButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buyVoucherButton" />
+
+            <Button
+                android:id="@+id/preauthorizeVoucherButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preauthorizeVoucherButton" />
+
+            <Button
+                android:id="@+id/listBoughtVouchersOnlineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listBoughtVouchersOnlineButton" />
+
+            <Button
+                android:id="@+id/listPreauthorizedVouchersOnlineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listPreauthorizedVouchersOnlineButton" />
+
+            <Button
+                android:id="@+id/listBoughtVouchersOfflineButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/listBoughtVouchersOfflineButton" />
+
+            <Button
+                android:id="@+id/generateTokenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/generateTokenButton" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

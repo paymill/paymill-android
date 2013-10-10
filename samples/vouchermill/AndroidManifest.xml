@@ -1,0 +1,102 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paymill.android.samples.vouchermill"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/VouchermillTheme" >
+        <activity
+            android:name="com.paymill.android.samples.vouchermill.ui.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.paymill.android.samples.vouchermill.ui.OnlineListActivity"
+            android:label="" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.DashboardActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.OfflineListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.paymill.android.samples.vouchermill.ui.NotConsumedListActivity"
+            android:label="@string/notConsumedListTitle" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.DashboardActivity" />
+        </activity>
+        <activity
+            android:name="com.paymill.android.samples.vouchermill.ui.DashboardActivity"
+            android:label="@string/dashboardTitle" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.LoginActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.GenerateTokenWoInitActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.LoginActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.GenerateTokenWoInitResultActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.paymill.android.samples.vouchermill.ui.VoucherScreenActivity"
+            android:label="" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.DashboardActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.VoucherScreenResultActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.VoucherScreenActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.VoucherScreenActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.FromListDetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.OnlineListActivity" />
+        </activity>
+        <activity android:name="com.paymill.android.samples.vouchermill.ui.FromNCListDetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paymill.android.samples.vouchermill.ui.NotConsumedListActivity" />
+        </activity>
+
+        <!-- Copy this into your project's manifest if you use our payment activity -->
+        <activity
+            android:name="com.paymill.android.payment.PaymentActivity"
+            android:theme="@style/Holo.Theme.Light.NoActionBar" >
+        </activity>
+
+        <!-- Always copy this to your project's manifest, as it is needed by the SDK -->
+        <service android:name="com.paymill.android.service.PMService" >
+        </service>
+    </application>
+
+</manifest>

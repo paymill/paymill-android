@@ -1,0 +1,102 @@
+<resources>
+
+    <string name="app_name">VoucherMill</string>
+    <string name="buy">Buy</string>
+    <string name="preauth">Reserve</string>
+    <string name="loginPublicKey">Enter your public key here:</string>
+    <string name="loginButton">Log In</string>
+    <string name="loginButtonWithTestAccount">Test Log In</string>
+    <string name="tokenWithParamsButton">Generate Token</string>
+    <string name="buyVoucherButton">Buy Voucher</string>
+    <string name="preauthorizeVoucherButton">Reserve Voucher</string>
+    <string name="listBoughtVouchersOnlineButton">Online List of Bought Vouchers</string>
+    <string name="listPreauthorizedVouchersOnlineButton">Online List of Reserved Vouchers</string>
+    <string name="listBoughtVouchersOfflineButton">Offline List of Bought Vouchers</string>
+    <string name="generateTokenButton">Generate Token</string>
+    <string name="amountTextLabel">Amount:</string>
+    <string name="descriptionTextLabel">Description:</string>
+    <string name="merchantPublicKeyLabel">Public Key:</string>
+    <string name="actionStringTextLabel">Action String:</string>
+    <string name="publicKeyHint">Enter Public Key</string>
+
+    <string-array name="currencies_array">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>GBP</item>
+    </string-array>
+
+    <string name="loginTitle">Log In</string>
+    <string name="dashboardTitle">Home</string>
+    <string name="generateTokenFragmentTitle">Generate Token</string>
+    <string name="no_vouchers">No Vouchers</string>
+    <string name="PurchasedVouchersOfflineFragmentTitle">Offline Vouchers</string>
+    <string name="BuyListFragmentTitle">List of Bought Vouchers</string>
+    <string name="notConsumedListTitle">Not Consumed Vouchers</string>
+    <string name="ReserveListFragmentTitle">List of Reserved Vouchers</string>
+    <string name="BuyVoucherFragmentTitle">Buy a Voucher</string>
+    <string name="ReserveVoucherFragmentTitle">Reserve a Voucher</string>
+    <string name="LoadingTransactionsListDialogTitle">Transactions List</string>
+    <string name="LoadingPreauthorizationsListDialogTitle">Preauthorizations List</string>
+    <string name="paymentButton">Pay</string>
+    <string name="resultDialog">Result:</string>
+    <string name="settingsButton">Settings</string>
+
+	<!-- Detail Screen -->
+    <string name="amountLabelText">Amount:</string>
+    <string name="createdAtLabelText">Created At:</string>
+    <string name="descriptionLabelText">Description:</string>
+    <string name="statusCodeLabelText">Status:</string>
+    <string name="errorTypeLabelText">Type:</string>
+    <string name="errorMessageLabelText">Message:</string>
+    <string name="DetailScreenTitle">Voucher Details</string>
+    <string name="DetailScreenTitleError">Error</string>
+    <string name="DetailResultScreenSuccessText">Payment Successful!</string>
+
+    <string-array name="servicemodes_array">
+        <item>test</item>
+        <item>live</item>
+    </string-array>
+	
+    <string name="liveButton">Live</string>
+    <string name="testButton">Test</string>
+    <string name="voucherAmountLabel">Amount: </string>
+    <string name="voucherCurrencyLabel">Currency: </string>
+    <string name="voucherDescriptionLabel">Description: </string>
+    <string name="buy_voucher">Buy</string>
+    <string name="reserve_voucher">Reserve</string>
+    <string name="token_voucher">Token</string>
+    <string name="consume_transaction">Consume</string>
+    <string name="transactions">Transactions</string>
+    <string name="preauthorizations">Preauthorizations</string>
+    <string name="online_transactions">Online Transactions</string>
+    <string name="online_preauthorizations">Online Preauthorizations</string>
+    <string name="error_alert_title">Error while %1$s</string>
+    <string name="error_alert_message">PayMill SDK did return an error while executing " %1$s "\nType: %2$s \nMessage: %3$s</string>
+    <string name="alert_success_title">Success!</string>
+    <string name="alert_success_message">%1$s successful!</string>
+    <string name="token_success_message">Token successfuly generated!\nToken ID:</string>
+    <string name="error_for_transactions">An error occurred while trying to process the transaction</string>
+    <string name="error_for_token">An error occurred while trying to generate the token</string>
+
+    <!-- Settings -->
+    <string name="auto_consume_label">Auto Consume:</string>
+    <string name="auto_consume_on_radio_btn_text">On</string>
+    <string name="auto_consume_off_radio_btn_text">Off</string>
+    <string name="payment_methods_label">Payment method:</string>
+    <string name="payment_method_chbx_credit_card">Credit card</string>
+    <string name="payment_method_chbx_direct_debit">Direct debit</string>
+    <string name="card_types_label">Supported credit cards:</string>
+    <string name="card_type_Visa_text">Visa</string>
+    <string name="card_type_MasterCard_text">MasterCard</string>
+    <string name="card_type_Maestro_text">Maestro</string>
+    <string name="card_type_AmericanExpress_text">AmericanExpress</string>
+    <string name="card_type_JCB_text">JCB</string>
+    <string name="card_type_DinersClub_text">DinersClub</string>
+    <string name="card_type_Discover_text">Discover</string>
+    <string name="card_type_UnionPay_text">UnionPay</string>
+    <string name="card_type_InstaPayment_text">InstaPayment</string>
+    <string name="card_type_Laser_text">Laser</string>
+    <string name="debit_country_label_text">Direct Debit country:</string>
+    <string name="radio_btn_Germany_text">Germany</string>
+
+</resources>

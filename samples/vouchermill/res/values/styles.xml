@@ -1,0 +1,119 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="Orange">#FFEF5322</color>
+    <color name="Brown">#891C1C</color>
+    <color name="Grey">#999999</color>
+    <color name="LightOrange">#FA9678</color>
+    <color name="MedianOrange">#F37956</color>
+    <color name="DarkOrange">#B4320F</color>
+    <color name="pressed">#CC891C1C</color>
+
+    <dimen name="screensMargin">12dp</dimen>
+    <dimen name="LoginScreenButtonsWidth">200dp</dimen>
+    <dimen name="detailScreenSuccessMessageCornerRadius">5dp</dimen>
+    <dimen name="detailScreenErrorMessageCornerRadius">5dp</dimen>
+    <dimen name="detailScreenSeparatorLineWidth">1dp</dimen>
+
+    <color name="detailScreenSuccessMessageColor">#B5E61D</color>
+    <color name="detailScreenErrorMessageColor">#FFFF0000</color>
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+    </style>
+
+    <style name="VouchermillTheme" parent="Holo.Theme.Light">
+        <item name="android:editTextStyle">@style/vouchermilleditTextStyle</item>
+        <item name="android:buttonStyle">@style/vouchermillButtonStyle</item>
+        <item name="android:actionBarStyle" tools:ignore="NewApi">@style/vouchermillActionBarStyle</item>
+        <item name="actionBarStyle">@style/vouchermillActionBarStyle</item>
+        <item name="android:textViewStyle">@style/vouchermillLabelStyle</item>
+        <item name="android:actionBarItemBackground" tools:ignore="NewApi">@drawable/selectable_background_vm</item>
+        <item name="actionBarItemBackground">@drawable/selectable_background_vm</item>
+        <item name="popupMenuStyle">@style/voucherMillABSPopupmenu</item>
+        <item name="android:popupMenuStyle" tools:ignore="NewApi">@style/voucherMillABSPopupmenu</item>
+        <item name="dropDownListViewStyle">@style/voucherMillABSDropDownListView</item>
+        <item name="android:dropDownListViewStyle" tools:ignore="NewApi">@style/voucherMillABSDropDownListView</item>
+        <item name="actionDropDownStyle">@style/voucherMillABSDropDown</item>
+        <item name="android:actionDropDownStyle" tools:ignore="NewApi">@style/voucherMillABSDropDown</item>
+        <item name="spinnerItemStyle">@style/SpinnerItemStyle</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemStyle</item>
+        <item name="spinnerDropDownItemStyle">@style/SpinnerDropDownItemStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemStyle</item>
+    </style>
+
+    <style name="vouchermillButtonStyle" parent="@style/Holo.Button">
+        <item name="android:background">@drawable/pm_button_background</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:shadowColor">@color/Black</item>
+        <item name="android:shadowDx">0.5</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">1.5</item>
+    </style>
+
+    <style name="vouchermillLabelStyle" parent="@style/Holo.TextView">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="vouchermilleditTextStyle" parent="@style/Holo.EditText"></style>
+
+    <style name="vouchermillActionBarStyle" parent="Widget.Sherlock.ActionBar">
+        <item name="android:background">@color/Orange</item>
+        <item name="background">@color/Orange</item>
+        <item name="android:titleTextStyle" tools:ignore="NewApi">@style/vouchermillActionBarTextStyle</item>
+        <item name="titleTextStyle">@style/vouchermillActionBarTextStyle</item>
+    </style>
+
+    <style name="vouchermillActionBarTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="voucherMillABSPopupmenu" parent="@style/Widget.Sherlock.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_vm</item>
+    </style>
+
+    <style name="voucherMillABSDropDownListView" parent="@style/Widget.Sherlock.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_vm</item>
+    </style>
+
+    <style name="voucherMillABSDropDown" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_vm</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_vm</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_vm</item>
+    </style>
+
+    <style name="SpinnerItemStyle" parent="Widget.Sherlock.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/TextAppearance.VMSpinnerItem</item>
+    </style>
+
+    <style name="TextAppearance.VMSpinnerItem" parent="TextAppearance.Sherlock.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="SpinnerDropDownItemStyle" parent="Widget.Sherlock.DropDownItem.Spinner">
+        <item name="android:textAppearance">@style/TextAppearance.VMDropDownItem</item>
+    </style>
+
+    <style name="TextAppearance.VMDropDownItem" parent="TextAppearance.Sherlock.Widget.DropDownItem">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+</resources>

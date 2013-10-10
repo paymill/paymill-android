@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsFragmentScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="@dimen/screensMargin" >
+
+    <LinearLayout
+        android:id="@+id/settingsFragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/autoConsumeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_consume_label" />
+
+        <CheckBox
+            android:id="@+id/checkboxAutoConsume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/auto_consume_label" />
+
+
+        <TextView
+            android:id="@+id/paymentMethodLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_methods_label" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCreditCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/payment_method_chbx_credit_card" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDirectDebit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/payment_method_chbx_direct_debit" />
+
+        <TextView
+            android:id="@+id/directDebitCountryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debit_country_label_text" />
+
+        <RadioGroup
+            android:id="@+id/countriesRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioButtonGermany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/radio_btn_Germany_text" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/cardTypesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_types_label" />
+
+        <CheckBox
+            android:id="@+id/checkboxVisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_Visa_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxMasterCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_MasterCard_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxMaestro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_Maestro_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxAmericanExpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_AmericanExpress_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxJCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_JCB_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxDinersClub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_DinersClub_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxDiscover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_Discover_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxUnionPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_UnionPay_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxInstaPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_InstaPayment_text" />
+
+        <CheckBox
+            android:id="@+id/checkboxLaser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/card_type_Laser_text" />
+    </LinearLayout>
+
+</ScrollView>

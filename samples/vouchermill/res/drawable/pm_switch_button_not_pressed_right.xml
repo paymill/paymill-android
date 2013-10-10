@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <stroke
+        android:width="@dimen/switchButtonRightNotPressedStrokeWidth"
+        android:color="@color/switchButtonRightNotPressedStrokeColor" />
+
+    <solid android:color="@color/switchButtonRightNotPressedColor" />
+
+    <padding
+        android:bottom="@dimen/switchButtonVerticalPadding"
+        android:left="@dimen/switchButtonHorizontalPadding"
+        android:right="@dimen/switchButtonHorizontalPadding"
+        android:top="@dimen/switchButtonVerticalPadding" />
+
+</shape>
