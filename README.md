@@ -1,11 +1,11 @@
 ![PAYMILL icon](https://static.paymill.com/r/335f99eb3914d517bf392beb1adaf7cccef786b6/img/logo-download_Light.png)
 # PAYMILL Android SDK
-
+___
 
 The Android SDK provides a flexible and easy to integrate payment solution for your Android applications.
 
 ## Sample App
-___
+
 
 <a href="https://play.google.com/store/apps/details?id=com.paymill.android.samples.vouchermill">
   <img alt="Get it on Google Play"
@@ -15,7 +15,7 @@ ___
 Our open source sample / demo app [VoucherMill](/samples/vouchermill) is available for download on Google Play. 
  
 ## Getting started
-___
+
 - Start with the [SDK guide](https://www.paymill.com/en-gb/documentation-3/reference/mobile-sdk/).
 - Install the latest release.
 - If you want to create transaction and preauthorizations directly from within your app, [install](https://paymill.com/mobile-app-install/) the PAYMILL mobile app.
@@ -23,11 +23,11 @@ ___
 - Check the [full API documentation](http://paymill.github.io/paymill-android/docs/sdk/).
 
 ## Requirements
-___
+
 Android 2.2 (API Level 8).
 
 ## Installation
-___
+
 - Eclipse users add the `androi-sdk-1.0.jar` to their `libs/` folder.
 - Maven users add this dependency to their `pom.xml`:
 
@@ -69,13 +69,13 @@ If you haven't already, you will need to add the `INTERNET` permission  to your 
 ```
 
 ## Working with the SDK
-___
+
 
 The main interface of the SDK is the [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html) class. All its methods return immediately and are thread-safe. Results are propagated to all registered listeners. The SDK supports two types of listeners:
 
 ### Listeners
 
-The class [PMManager](sadas) exposes all the functionalities of the SDK trough static methods. The methods are asynchronous, return immediately and are thread-safe. Before calling a method, you should register a listener to receive the result. There are two types of listeners:
+The class [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html)exposes all the functionalities of the SDK trough static methods. The methods are asynchronous, return immediately and are thread-safe. Before calling a method, you should register a listener to receive the result. There are two types of listeners:
 
 - **Foreground Listeners** can be added with the `addListener()` methods. Their callbacks are executed on the UI Thread and it is safe to modify UI elements from the callbacks.
 - **A BackgroundListener** is set with the `setBackgroundListener()` method. The callbacks are executed on a separate Thread. Use if for long running and/or critical operations. The execution of the callback holds the PMService in foreground mode, so make sure you return from the callback method at some point.
@@ -125,7 +125,7 @@ protected void onDestroy() {
 ```
 ### Create a transaction
 
-To create transactions and preauthorizations directly from the SDK you first need to install the Mobile App. In the code you will have to initialize the SDK, by calling [PMManager.init()](/reference/com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String) method with your PAYMILL public key and mode.
+To create transactions and preauthorizations directly from the SDK you first need to install the Mobile App. In the code you will have to initialize the SDK, by calling [PMManager.init()](http://paymill.github.io/paymill-android/docs/sdk//reference/com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String) method with your PAYMILL public key and mode.
 
 ```
 // init the sdk as soon as possible
@@ -162,7 +162,7 @@ protected void onDestroy() {
 
 
 ## Release notes
-___
+
 ### 1.0
 + First live release.
 + Added the possiblity to generate tokens without initializing the SDK. The method can be used exactly like the JS-Bridge and does not require extra activation for mobile.

@@ -7,15 +7,15 @@ The PAYMILL Android SDK Sample / Demo App
 </a>
 
 ## Using the payment screens
-___
+
 
 ### Installation
-___
+
 
 To use the payment screens you need to copy the whole package `com.paymill.android.payment`, as well as all resources from the `res/` folder that start with the prefix `pm_` into your project.
 
 ### Styling the payment screens
-____
+
 
 #### Change only colors
 If you like the layout of the payment screens and you simply want to change the colors, you can set them from the pm_styles.xml file.
@@ -27,7 +27,7 @@ If you want to use the fragments in your own activity, you have to create them w
 Use the [CreditCardValidator](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CreditCardValidator.html) and [CardTypeParser](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CardTypeParser) classes.
 
 ### Work with the PaymentActivity
-___
+
 
 API Docs for the PaymentActivity are available [here](http://paymill.github.io/paymill-android/docs/samples/vouchermill/) .
 
@@ -83,18 +83,18 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 
 ## Issues
-___
+
 
 If you find a bug, please use the [issue tracker](https://github.com/paymill/paymill-android/issues) to create a ticket.
 
 ## Developers
-___
+
 
 If you want to contribute your code, fork the repository, commit your changes and create a pull request. Please make sure you include a detailed description of your changes.
 
 
 ## License
-___
+
 The MIT License (MIT)
 
 Copyright (c) [2013] [PAYMILL GmbH]
