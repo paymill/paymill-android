@@ -71,8 +71,6 @@ If you haven't already, you will need to add the `INTERNET` permission  to your 
 ## Working with the SDK
 
 
-The main interface of the SDK is the [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html) class. All its methods return immediately and are thread-safe. Results are propagated to all registered listeners. The SDK supports two types of listeners:
-
 ### Listeners
 
 The class [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html)exposes all the functionalities of the SDK trough static methods. The methods are asynchronous, return immediately and are thread-safe. Before calling a method, you should register a listener to receive the result. There are two types of listeners:
