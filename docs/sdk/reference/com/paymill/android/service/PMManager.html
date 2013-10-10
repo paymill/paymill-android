@@ -1,0 +1,3899 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for PayMill Android SDK." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
+<title>
+
+  PMManager
+
+
+| PayMill Android SDK
+
+</title>
+<link href="../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../", "../../../../../assets/");
+</script>
+<script src="../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">PayMill Android SDK</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links"><nobr>
+                <a href="../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../classes.html" >Class Index</a></nobr>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/api/package-summary.html">com.paymill.android.api</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/factory/package-summary.html">com.paymill.android.factory</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/listener/package-summary.html">com.paymill.android.listener</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../com/paymill/android/service/package-summary.html">com.paymill.android.service</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="selected api apilevel-"><a href="../../../../com/paymill/android/service/PMManager.html">PMManager</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.html">PMService</a></li>
+      </ul>
+    </li>
+              
+              
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Exceptions</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.html">PMError</a></li>
+      </ul>
+    </li>
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links"><nobr>
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a></nobr>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>PMManager</h1>
+
+
+
+  
+    extends <a href="http://d.android.com/reference/java/lang/Object.html">Object</a><br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://d.android.com/reference/java/lang/Object.html">java.lang.Object</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.paymill.android.service.PMManager</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>This class is the main entry point for all SDK calls.
+ 
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMNewDeviceIdListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGetPreauthListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListTransListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListNotConsPreauthsListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGenerateTokenListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMInitListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumePreauthListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGetTransListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListNotConsTransListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMTransListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumeTransListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListPreauthsListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMPreauthListener)">addListener</a></span>(<a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Adds a <b>strong</b> reference of the specified listener to the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#consumePreauthorization(android.content.Context, com.paymill.android.api.Preauthorization)">consumePreauthorization</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a> preauthorization)</nobr>
+        
+        <div class="jd-descrdiv">Consume the given preauthorization.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#consumePreauthorization(android.content.Context, java.lang.String)">consumePreauthorization</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> preauthorizationId)</nobr>
+        
+        <div class="jd-descrdiv">Consume the given preauthorization.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#consumeTransaction(android.content.Context, java.lang.String)">consumeTransaction</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> transactionId)</nobr>
+        
+        <div class="jd-descrdiv">Consume the given transaction.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#consumeTransaction(android.content.Context, com.paymill.android.api.Transaction)">consumeTransaction</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> transaction)</nobr>
+        
+        <div class="jd-descrdiv">Consume the given transaction.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#generateToken(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams)">generateToken</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> params)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new token.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#generateToken(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, com.paymill.android.service.PMService.ServiceMode, java.lang.String)">generateToken</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> params, <a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a> mode, <a href="http://d.android.com/reference/java/lang/String.html">String</a> merchantPublicKey)</nobr>
+        
+        <div class="jd-descrdiv">This is the preferred way to use the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getBackgroundListener()">getBackgroundListener</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="http://d.android.com/reference/java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getDeviceId()">getDeviceId</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the current device id.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getNewDeviceId(android.content.Context)">getNewDeviceId</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</nobr>
+        
+        <div class="jd-descrdiv">Create new device id.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedPreauthorizations(android.content.Context)">getNotConsumedPreauthorizations</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</nobr>
+        
+        <div class="jd-descrdiv">Lists all preauthorizations for the configured deviceId.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedTransactions(android.content.Context)">getNotConsumedTransactions</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</nobr>
+        
+        <div class="jd-descrdiv">Lists not consumed transactions.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getPreauthorization(android.content.Context, java.lang.String)">getPreauthorization</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> preauthorizationId)</nobr>
+        
+        <div class="jd-descrdiv">Get a specific preauthorization.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getTransaction(android.content.Context, java.lang.String)">getTransaction</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> transactionId)</nobr>
+        
+        <div class="jd-descrdiv">Get a specific transaction.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="http://d.android.com/reference/java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#getVersion()">getVersion</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the SDK Version.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String)">init</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a> mode, <a href="http://d.android.com/reference/java/lang/String.html">String</a> merchantPublicKey, <a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a> backgroundListener, <a href="http://d.android.com/reference/java/lang/String.html">String</a> deviceId)</nobr>
+        
+        <div class="jd-descrdiv">Initialize the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#isInit()">isInit</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Status of the SDK</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#listPreauthorizations(android.content.Context)">listPreauthorizations</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</nobr>
+        
+        <div class="jd-descrdiv">Lists all preauthorizations for the configured deviceId.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#listTransactions(android.content.Context)">listTransactions</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</nobr>
+        
+        <div class="jd-descrdiv">Lists all transactions for the configured deviceId.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#preauthorization(android.content.Context, java.lang.String, com.paymill.android.factory.PMPaymentParams, boolean)">preauthorization</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> token, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new <code><a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a></code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#preauthorization(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, boolean)">preauthorization</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new <code><a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a></code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMGetTransListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMTransListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMListPreauthsListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMPreauthListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMListTransListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMListNotConsTransListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMGetPreauthListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMListNotConsPreauthsListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMConsumePreauthListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMGenerateTokenListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMConsumeTransListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMInitListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#removeListener(com.paymill.android.listener.PMNewDeviceIdListener)">removeListener</a></span>(<a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> listener)</nobr>
+        
+        <div class="jd-descrdiv">Remove the specified listener from the SDK.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            synchronized
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#setBackgroundListener(com.paymill.android.listener.PMBackgroundListener)">setBackgroundListener</a></span>(<a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a> backgroundListener)</nobr>
+        
+        <div class="jd-descrdiv">Sets the specified object as background listener.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#transaction(android.content.Context, java.lang.String, com.paymill.android.factory.PMPaymentParams, boolean)">transaction</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> token, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new <code><a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a></code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMManager.html#transaction(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, boolean)">transaction</a></span>(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</nobr>
+        
+        <div class="jd-descrdiv">Creates a new <code><a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a></code>.</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="http://d.android.com/reference/java/lang/Object.html">java.lang.Object</a>
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(<a href="http://d.android.com/reference/java/lang/Object.html">Object</a> arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            <a href="http://d.android.com/reference/java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://d.android.com/reference/java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="addListener(com.paymill.android.listener.PMNewDeviceIdListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMGetPreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMListTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMListNotConsPreauthsListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMGenerateTokenListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMInitListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMConsumePreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMGetTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMListNotConsTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMConsumeTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMListPreauthsListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="addListener(com.paymill.android.listener.PMPreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">addListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Adds a <b>strong</b> reference of the specified listener to the SDK.
+ Always remove the listener in onDestroy() of your UI elements.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="consumePreauthorization(android.content.Context, com.paymill.android.api.Preauthorization)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">consumePreauthorization</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a> preauthorization)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Consume the given preauthorization. After successful consumption, the
+ preauthorization will no longer appear in the list of not consumed.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumePreauthListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>preauthorization</td>
+          <td>the preauthorization</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context or the preauthorization is null or the
+             manifest file is not configured correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="consumePreauthorization(android.content.Context, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">consumePreauthorization</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> preauthorizationId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Consume the given preauthorization. After successful consumption, the
+ preauthorization will no longer appear in the list of not consumed.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumePreauthListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>preauthorizationId</td>
+          <td>the id of the preauthorization.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="consumeTransaction(android.content.Context, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">consumeTransaction</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> transactionId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Consume the given transaction. After successful consumption, the
+ transaction will no longer appear in the list of not consumed.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumeTransListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>transactionId</td>
+          <td>the id of the transaction.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="consumeTransaction(android.content.Context, com.paymill.android.api.Transaction)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">consumeTransaction</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> transaction)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Consume the given transaction. After successful consumption, the
+ transaction will no longer appear in the list of not consumed.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumeTransListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>transaction</td>
+          <td>the transaction.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context or the transaction is null or the manifest
+             file is not configured correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="generateToken(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">generateToken</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> params)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new token.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGenerateTokenListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.
+ <p>
+ Learn more about tokens in the PayMill <a
+ href="https://www.paymill.com/en-gb/documentation-3/">documentation</a>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>method</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>params</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="generateToken(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, com.paymill.android.service.PMService.ServiceMode, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">generateToken</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> params, <a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a> mode, <a href="http://d.android.com/reference/java/lang/String.html">String</a> merchantPublicKey)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>This is the preferred way to use the SDK.<br/>
+ Generate a token using this method and use it in your backend to process
+ transactions, preauthorizations or any other future available trough the
+ PayMill API.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGenerateTokenListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.
+ <p>
+ Learn more about tokens in the PayMill <a
+ href="https://www.paymill.com/en-gb/documentation-3/">documentation</a>.
+ </p>
+ <p>
+ <b>Note:</b> This method does not require an init and you don't need to
+ have your account enabled for mobile.
+ </p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>method</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>params</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>mode</td>
+          <td>LIVE or TEST mode.</td>
+        </tr>
+        <tr>
+          <th>merchantPublicKey</td>
+          <td>your PayMill <b>public</b> key for LIVE or TEST mode,
+            depending on the previous parameter.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getBackgroundListener()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a>
+      </span>
+      <span class="sympad">getBackgroundListener</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the current background listener or null if not set.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getDeviceId()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="http://d.android.com/reference/java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getDeviceId</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the current device id.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the id or null if none is set.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getNewDeviceId(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">getNewDeviceId</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create new device id.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMConsumePreauthListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getNotConsumedPreauthorizations(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">getNotConsumedPreauthorizations</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Lists all preauthorizations for the configured deviceId.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListNotConsPreauthsListener)">add</a></code>
+ a foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getNotConsumedTransactions(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">getNotConsumedTransactions</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Lists not consumed transactions.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListNotConsTransListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getPreauthorization(android.content.Context, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">getPreauthorization</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> preauthorizationId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get a specific preauthorization.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGetPreauthListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>preauthorizationId</td>
+          <td>the id of the preauthorization.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getTransaction(android.content.Context, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">getTransaction</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> transactionId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Get a specific transaction.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMGetTransListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>transactionId</td>
+          <td>the id of the transaction.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getVersion()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="http://d.android.com/reference/java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getVersion</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the SDK Version.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the current SDK version.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">init</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a> mode, <a href="http://d.android.com/reference/java/lang/String.html">String</a> merchantPublicKey, <a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a> backgroundListener, <a href="http://d.android.com/reference/java/lang/String.html">String</a> deviceId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Initialize the SDK. This should always be the first call you make, when
+ you use the SDK. You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMInitListener)">add</a></code> a foreground listener to receive a callback on the UI thread.
+ 
+ <p>
+ <b>Note:</b> If a background listener is set, it will receive the list of
+ not consumed preauthorizations and transactions.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>mode</td>
+          <td>LIVE or TEST mode.</td>
+        </tr>
+        <tr>
+          <th>merchantPublicKey</td>
+          <td>your PayMill <b>public</b> key for LIVE or TEST mode,
+            depending on the previous parameter.</td>
+        </tr>
+        <tr>
+          <th>backgroundListener</td>
+          <td>an optional background listener.</td>
+        </tr>
+        <tr>
+          <th>deviceId</td>
+          <td>an optional deviceID. <br/>
+            <b>Note:</b> You cannot specify an arbitrary string. The
+            device ID must have been generated by the SDK, for example
+            with <code><a href="../../../../com/paymill/android/service/PMManager.html#getNewDeviceId(android.content.Context)">getNewDeviceId(Context)</a></code> . You can use this
+            parameter to associate end users in your applications with SDK
+            deviceIDs.If you don't specify a device ID, the SDK will
+            generate one and save it for later use.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="isInit()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        boolean
+      </span>
+      <span class="sympad">isInit</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Status of the SDK</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>true if the SDK has been successfully initialized, false
+         otherwise
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="listPreauthorizations(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">listPreauthorizations</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Lists all preauthorizations for the configured deviceId.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListPreauthsListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="listTransactions(android.content.Context)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">listTransactions</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Lists all transactions for the configured deviceId.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMListTransListener)">add</a></code> a
+ foreground listener to receive a callback on the UI thread or a set a
+ background listener to receive a callback on a separate Thread.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="preauthorization(android.content.Context, java.lang.String, com.paymill.android.factory.PMPaymentParams, boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">preauthorization</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> token, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new <code><a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a></code>.<br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMPreauthListener)">add</a></code> a foreground
+ listener to receive a callback on the UI thread or a set a background
+ listener to receive a callback on a separate Thread.
+ <p>
+ <b>Note:</b> If you set consumable to false, the preauthorization will
+ never appears in the <code><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedPreauthorizations(android.content.Context)">list</a></code> of not consumed preauthorizations.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>token</td>
+          <td>a previously generated token.</td>
+        </tr>
+        <tr>
+          <th>parameters</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>consumable</td>
+          <td>true if you want to consume the preauthorization later, false
+            otherwise.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="preauthorization(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">preauthorization</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new <code><a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a></code>. <br/>
+ This is a convenience method, which generates a token in the background <br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMPreauthListener)">add</a></code> a foreground
+ listener to receive a callback on the UI thread or a set a background
+ listener to receive a callback on a separate Thread.
+ <p>
+ <b>Note:</b> If you set consumable to false, the preauthorization will
+ never appears in the <code><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedPreauthorizations(android.content.Context)">list</a></code> of not consumed preauthorizations.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>method</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>parameters</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>consumable</td>
+          <td>true if you want to consume the preauthorization later, false
+            otherwise.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMGetTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMListPreauthsListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMPreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMListTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMListNotConsTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMGetPreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMListNotConsPreauthsListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMConsumePreauthListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMGenerateTokenListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMConsumeTransListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMInitListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="removeListener(com.paymill.android.listener.PMNewDeviceIdListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">removeListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> listener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Remove the specified listener from the SDK.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>listener</td>
+          <td>the listener.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="setBackgroundListener(com.paymill.android.listener.PMBackgroundListener)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+        synchronized 
+        void
+      </span>
+      <span class="sympad">setBackgroundListener</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a> backgroundListener)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Sets the specified object as background listener. This listener will
+ receive all SDK callbacks on a separate thread, which is protected by the
+ PMService (which always runs in foreground mode).</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="transaction(android.content.Context, java.lang.String, com.paymill.android.factory.PMPaymentParams, boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">transaction</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="http://d.android.com/reference/java/lang/String.html">String</a> token, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new <code><a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a></code>. <br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMTransListener)">add</a></code> a foreground
+ listener to receive a callback on the UI thread or a set a background
+ listener to receive a callback on a separate Thread.
+ <p>
+ <b>Note:</b> If you set consumable to false, the transaction will never
+ appears in the <code><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedTransactions(android.content.Context)">list</a></code> of not
+ consumed transactions.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>token</td>
+          <td>a previously generated token.</td>
+        </tr>
+        <tr>
+          <th>parameters</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>consumable</td>
+          <td>true if you want to consume the transaction later, false
+            otherwise.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="transaction(android.content.Context, com.paymill.android.factory.PMPaymentMethod, com.paymill.android.factory.PMPaymentParams, boolean)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">transaction</span>
+      <span class="normal">(<a href="http://d.android.com/reference/android/content/Context.html">Context</a> context, <a href="../../../../com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a> method, <a href="../../../../com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a> parameters, boolean consumable)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates a new <code><a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a></code>. <br/>
+ This is a convenience method, which generates a token in the background <br/>
+ You should first <code><a href="../../../../com/paymill/android/service/PMManager.html#addListener(com.paymill.android.listener.PMTransListener)">add</a></code> a foreground
+ listener to receive a callback on the UI thread or a set a background
+ listener to receive a callback on a separate Thread.
+ <p>
+ <b>Note:</b> If you set consumable to false, the transaction will never
+ appears in the <code><a href="../../../../com/paymill/android/service/PMManager.html#getNotConsumedTransactions(android.content.Context)">list</a></code> of not
+ consumed transactions.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>context</td>
+          <td>the application context.</td>
+        </tr>
+        <tr>
+          <th>method</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>parameters</td>
+          <td>created with the <code><a href="../../../../com/paymill/android/factory/PMFactory.html">PMFactory</a></code>
+            .</td>
+        </tr>
+        <tr>
+          <th>consumable</td>
+          <td>true if you want to consume the transaction later, false
+            otherwise.</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://d.android.com/reference/java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the context is null or the manifest file is not configured
+             correctly.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize doclava-developer-docs.js */
+</script>
+
+</body>
+</html>

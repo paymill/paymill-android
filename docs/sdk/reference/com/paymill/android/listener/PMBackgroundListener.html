@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Javadoc API documentation for PayMill Android SDK." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
+<title>
+
+  PMBackgroundListener
+
+
+| PayMill Android SDK
+
+</title>
+<link href="../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../", "../../../../../assets/");
+</script>
+<script src="../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">PayMill Android SDK</span>
+    
+    </div>
+    <div id="headerRight">
+      
+  <div id="search" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links"><nobr>
+                <a href="../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../classes.html" >Class Index</a></nobr>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/api/package-summary.html">com.paymill.android.api</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/factory/package-summary.html">com.paymill.android.factory</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../com/paymill/android/listener/package-summary.html">com.paymill.android.listener</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../com/paymill/android/service/package-summary.html">com.paymill.android.service</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="selected api apilevel-"><a href="../../../../com/paymill/android/listener/PMBackgroundListener.html">PMBackgroundListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links"><nobr>
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a></nobr>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    interface
+<h1>PMBackgroundListener</h1>
+
+
+
+  
+  
+      implements 
+      
+        <a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">PMConsumePreauthListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">PMConsumeTransListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> 
+      
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+         	
+        <td colspan="1" class="jd-inheritance-class-cell">com.paymill.android.listener.PMBackgroundListener</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>Implement this interface if you want to be kept informed about all SDK
+ interactions. When you
+ <code><a href="../../../../com/paymill/android/service/PMManager.html#setBackgroundListener(com.paymill.android.listener.PMBackgroundListener)">set</a></code> the implementing as background listener in the SDK, it will receive all
+ callbacks on a separate thread, which is protected by the PMService (which
+ always runs in foreground mode).</p>
+
+
+
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../../com/paymill/android/service/PMManager.html#setBackgroundListener(com.paymill.android.listener.PMBackgroundListener)">setBackgroundListener(PMBackgroundListener)</a></code></li><li><code><a href="../../../../com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String)">init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, String, PMBackgroundListener, String)</a></code></li>
+      </ul>
+  </div>
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMConsumePreauthListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMConsumePreauthListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html">com.paymill.android.listener.PMConsumePreauthListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMConsumePreauthListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMConsumePreauthListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMConsumePreauthListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html#onConsumePreauth(com.paymill.android.api.Preauthorization)">onConsumePreauth</a></span>(<a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a> preauthorization)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful preauthorization consumption.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMConsumePreauthListener.html#onConsumePreauthFailed(com.paymill.android.service.PMError)">onConsumePreauthFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful preauthorization consumption.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMConsumeTransListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMConsumeTransListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html">com.paymill.android.listener.PMConsumeTransListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMConsumeTransListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMConsumeTransListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMConsumeTransListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html#onConsumeTransaction(com.paymill.android.api.Transaction)">onConsumeTransaction</a></span>(<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> transaction)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful transaction consumption.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMConsumeTransListener.html#onConsumeTransactionFailed(com.paymill.android.service.PMError)">onConsumeTransactionFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful transaction consumption.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMGenerateTokenListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMGenerateTokenListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html">com.paymill.android.listener.PMGenerateTokenListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMGenerateTokenListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMGenerateTokenListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMGenerateTokenListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html#onGenerateToken(java.lang.String)">onGenerateToken</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> token)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful token generation.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGenerateTokenListener.html#onGenerateTokenFailed(com.paymill.android.service.PMError)">onGenerateTokenFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful token generation.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMGetPreauthListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMGetPreauthListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html">com.paymill.android.listener.PMGetPreauthListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMGetPreauthListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMGetPreauthListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMGetPreauthListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html#onGetPreauth(com.paymill.android.api.Preauthorization)">onGetPreauth</a></span>(<a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a> preauthorization)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful preauthorization retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGetPreauthListener.html#onGetPreauthFailed(com.paymill.android.service.PMError)">onGetPreauthFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful preauthorization retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMGetTransListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMGetTransListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMGetTransListener.html">com.paymill.android.listener.PMGetTransListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMGetTransListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMGetTransListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMGetTransListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGetTransListener.html#onGetTransaction(com.paymill.android.api.Transaction)">onGetTransaction</a></span>(<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> transaction)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful transaction retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMGetTransListener.html#onGetTransactionFailed(com.paymill.android.service.PMError)">onGetTransactionFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful transaction retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMInitListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMInitListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMInitListener.html">com.paymill.android.listener.PMInitListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMInitListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMInitListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMInitListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMInitListener.html#onInit(java.lang.String)">onInit</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> deviceId)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful initialization.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMInitListener.html#onInitFailed(com.paymill.android.service.PMError)">onInitFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful initialization.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListNotConsPreauthsListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMListNotConsPreauthsListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">com.paymill.android.listener.PMListNotConsPreauthsListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMListNotConsPreauthsListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMListNotConsPreauthsListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMListNotConsPreauthsListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html#onListNotConsPreauths(java.util.Collection<com.paymill.android.api.Preauthorization>)">onListNotConsPreauths</a></span>(<a href="http://d.android.com/reference/java/util/Collection.html">Collection</a>&lt;<a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a>&gt; preauthorizations)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html#onListNotConsPreauthsFailed(com.paymill.android.service.PMError)">onListNotConsPreauthsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListNotConsTransListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMListNotConsTransListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">com.paymill.android.listener.PMListNotConsTransListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMListNotConsTransListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMListNotConsTransListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMListNotConsTransListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html#onListNotConsTransactions(java.util.Collection<com.paymill.android.api.Transaction>)">onListNotConsTransactions</a></span>(<a href="http://d.android.com/reference/java/util/Collection.html">Collection</a>&lt;<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a>&gt; transactions)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html#onListNotConsTransactionsFailed(com.paymill.android.service.PMError)">onListNotConsTransactionsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">com.paymill.android.listener.PMListPreauthsListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html#onListPreauths(java.util.Collection<com.paymill.android.api.Preauthorization>)">onListPreauths</a></span>(<a href="http://d.android.com/reference/java/util/Collection.html">Collection</a>&lt;<a href="../../../../com/paymill/android/api/Preauthorization.html">Preauthorization</a>&gt; preauthorizations)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html#onListPreauthsFailed(com.paymill.android.service.PMError)">onListPreauthsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListTransListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMListTransListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMListTransListener.html">com.paymill.android.listener.PMListTransListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMListTransListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMListTransListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMListTransListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListTransListener.html#onListTransactions(java.util.Collection<com.paymill.android.api.Transaction>)">onListTransactions</a></span>(<a href="http://d.android.com/reference/java/util/Collection.html">Collection</a>&lt;<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a>&gt; transactions)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListTransListener.html#onListTransactionsFailed(com.paymill.android.service.PMError)">onListTransactionsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMNewDeviceIdListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMNewDeviceIdListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">com.paymill.android.listener.PMNewDeviceIdListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMNewDeviceIdListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMNewDeviceIdListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMNewDeviceIdListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html#onNewDeviceId(java.lang.String)">onNewDeviceId</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> deviceId)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html#onNewDeviceIdFailed(com.paymill.android.service.PMError)">onNewDeviceIdFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMPreauthListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMPreauthListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMPreauthListener.html">com.paymill.android.listener.PMPreauthListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMPreauthListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMPreauthListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMPreauthListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPreauthListener.html#onPreauth(com.paymill.android.api.Transaction)">onPreauth</a></span>(<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> preauthorizationTransaction)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPreauthListener.html#onPreauthFailed(com.paymill.android.service.PMError)">onPreauthFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMTransListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMTransListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMTransListener.html">com.paymill.android.listener.PMTransListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMTransListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMTransListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMTransListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMTransListener.html#onTransaction(com.paymill.android.api.Transaction)">onTransaction</a></span>(<a href="../../../../com/paymill/android/api/Transaction.html">Transaction</a> transaction)</nobr>
+        
+        <div class="jd-descrdiv">Called on successful retrieval.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMTransListener.html#onTransactionFailed(com.paymill.android.service.PMError)">onTransactionFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize doclava-developer-docs.js */
+</script>
+
+</body>
+</html>
