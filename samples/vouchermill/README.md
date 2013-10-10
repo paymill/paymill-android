@@ -14,6 +14,21 @@ The PAYMILL Android SDK Sample / Demo App
 
 To use the payment screens you need to copy the whole package `com.paymill.android.payment`, as well as all resources from the `res/` folder that start with the prefix `pm_` into your project.
 
+Your manifest should include following declarations:
+
+```
+   <!-- Copy this into your project's manifest if you use our payment activity -->
+   <activity
+       android:name="com.paymill.android.payment.PaymentActivity"
+        android:theme="@style/Holo.Theme.Light.NoActionBar" >
+   </activity>
+
+   <!-- Always copy this to your project's manifest, as it is needed by the SDK -->
+   <service android:name="com.paymill.android.service.PMService" >
+   </service>
+```
+
+
 ### Styling the payment screens
 
 
