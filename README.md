@@ -1,6 +1,5 @@
 ![PAYMILL icon](https://static.paymill.com/r/335f99eb3914d517bf392beb1adaf7cccef786b6/img/logo-download_Light.png)
 # PAYMILL Android SDK
-___
 
 The Android SDK provides a flexible and easy to integrate payment solution for your Android applications.
 
