@@ -85,11 +85,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>net.hockeyapp.android</groupId>
-			<artifactId>HockeySDK</artifactId>
-			<version>2.2.1</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -101,10 +96,6 @@
 				<artifactId>android-maven-plugin</artifactId>
 				<version>3.6.1</version>
 				<configuration>
-					<androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
-					<assetsDirectory>${project.basedir}/assets</assetsDirectory>
-					<resourceDirectory>${project.basedir}/res</resourceDirectory>
-					<nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
 					<sdk>
 						<platform>16</platform>
 					</sdk>
@@ -113,102 +104,6 @@
 				<extensions>true</extensions>
 			</plugin>
 
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>local</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<site.dir>${basedir}/target/site</site.dir>
-				<android.sdk.path>${env.ANDROID_HOME}</android.sdk.path>
-			</properties>
-		</profile>
-		<profile>
-			<id>qaiware</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<properties>
-				<site.dir>/var/www/qaiware.com/reports/paymill_android_samples_vouchermill</site.dir>
-				<android.sdk.path>/opt/android-sdk-linux</android.sdk.path>
-			</properties>
-		</profile>
-	</profiles>
-
-	<reporting>
-		<outputDirectory>${site.dir}</outputDirectory>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-				<version>2.3</version>
-				<configuration>
-					<excludes>
-						<exclude>com/paymill/android/android/samples/vouchermill/R.java</exclude>
-						<exclude>com/paymill/android/android/samples/vouchermill/BuildConfig.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>taglist-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-pmd-plugin</artifactId>
-				<version>2.7.1</version>
-				<configuration>
-					<excludes>
-						<linkXref>true</linkXref>
-						<sourceEncoding>utf-8</sourceEncoding>
-					</excludes>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
-				<version>2.5.2</version>
-				<configuration>
-					<xmlOutput>true</xmlOutput>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.5.2</version>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>javancss-maven-plugin</artifactId>
-				<version>2.0</version>
-			</plugin>
-		</plugins>
-	</reporting>
-
-	<repositories>
-		<repository>
-			<id>thirdparty</id>
-			<name>Third Party Qaiware Repository</name>
-			<url>http://ssh.qaiware.com:8085/nexus/content/repositories/thirdparty</url>
-		</repository>
-		<repository>
-			<id>snapshots</id>
-			<url>http://ssh.qaiware.com:8085/nexus/content/repositories/snapshots</url>
-		</repository>
-		<repository>
-			<id>releases</id>
-			<url>http://ssh.qaiware.com:8085/nexus/content/repositories/releases</url>
-		</repository>
-	</repositories>
 </project>
