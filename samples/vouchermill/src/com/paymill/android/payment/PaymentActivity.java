@@ -819,12 +819,14 @@ public class PaymentActivity extends FragmentActivity {
 		 * allowed.
 		 */
 		public Settings() {
-			// add all card types by default
-			for (CardType cardType : CardType.values()) {
-				if (cardType != CardType.Invalid
-						&& cardType != CardType.YetUnknown)
-					cardTypes.add(cardType);
-			}
+			cardTypes.add(CardType.Visa);
+			cardTypes.add(CardType.Maestro);
+			cardTypes.add(CardType.MasterCard);
+			cardTypes.add(CardType.AmericanExpress);
+			cardTypes.add(CardType.DinersClub);
+			cardTypes.add(CardType.Discover);
+			cardTypes.add(CardType.UnionPay);
+			cardTypes.add(CardType.JCB);
 		}
 
 		/**
