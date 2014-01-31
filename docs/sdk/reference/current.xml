@@ -170,6 +170,17 @@
  visibility="public"
 >
 </method>
+<method name="getBic"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="getCardHolder"
  return="java.lang.String"
  abstract="false"
@@ -259,6 +270,17 @@
 >
 </method>
 <method name="getHolder"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getIban"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -1049,7 +1071,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="accountHolder" type="java.lang.String">
@@ -1068,7 +1090,7 @@
  synchronized="false"
  static="true"
  final="false"
- deprecated="not deprecated"
+ deprecated="deprecated"
  visibility="public"
 >
 <parameter name="accountHolder" type="java.lang.String">
@@ -1076,6 +1098,23 @@
 <parameter name="accountNumber" type="java.lang.String">
 </parameter>
 <parameter name="bankNumber" type="java.lang.String">
+</parameter>
+</method>
+<method name="genIbanBicPayment"
+ return="com.paymill.android.factory.PMPaymentMethod"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="accountHolder" type="java.lang.String">
+</parameter>
+<parameter name="iban" type="java.lang.String">
+</parameter>
+<parameter name="bic" type="java.lang.String">
 </parameter>
 </method>
 <method name="genPaymentParams"
@@ -1679,10 +1718,56 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="httpCode" type="int">
+</parameter>
+</constructor>
+<constructor name="PMError"
+ type="com.paymill.android.service.PMError"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="com.paymill.android.service.PMError.BridgeError">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="PMError"
+ type="com.paymill.android.service.PMError"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 <parameter name="in" type="android.os.Parcel">
 </parameter>
 </constructor>
 <method name="describeContents"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getBridgeError"
+ return="com.paymill.android.service.PMError.BridgeError"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHttpCode"
  return="int"
  abstract="false"
  native="false"
@@ -1742,6 +1827,39 @@
  visibility="public"
 >
 </field>
+</class>
+<class name="PMError.BridgeError"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.paymill.android.service.PMError.BridgeError"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.paymill.android.service.PMError.BridgeError[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 </class>
 <class name="PMError.Type"
  extends="java.lang.Enum"
@@ -2048,7 +2166,41 @@
 </parameter>
 <parameter name="method" type="com.paymill.android.factory.PMPaymentMethod">
 </parameter>
+<parameter name="mode" type="com.paymill.android.service.PMService.ServiceMode">
+</parameter>
+<parameter name="merchantPublicKey" type="java.lang.String">
+</parameter>
+</method>
+<method name="generateToken"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="method" type="com.paymill.android.factory.PMPaymentMethod">
+</parameter>
 <parameter name="params" type="com.paymill.android.factory.PMPaymentParams">
+</parameter>
+</method>
+<method name="generateToken"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="method" type="com.paymill.android.factory.PMPaymentMethod">
 </parameter>
 </method>
 <method name="getBackgroundListener"

@@ -169,6 +169,7 @@
               
     <li><h2>Enums</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></li>
           <li class="selected api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></li>
       </ul>
@@ -406,26 +407,33 @@ Summary:
     
     <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
+        <td class="jd-linkcol">BRIDGE&nbsp;</td>
+        <td class="jd-descrcol" width="100%">The PAYMILL bridge returned an error.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
         <td class="jd-linkcol">INTERNAL&nbsp;</td>
         <td class="jd-descrcol" width="100%">Used for internal errors.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
         <td class="jd-linkcol">IO&nbsp;</td>
         <td class="jd-descrcol" width="100%">There was an error while connecting to the PayMill Service.&nbsp;</td>
     </tr>
     
     
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
         <td class="jd-linkcol">NOT_INIT&nbsp;</td>
         <td class="jd-descrcol" width="100%">You did not initialize the SDK.&nbsp;</td>
     </tr>
     
     
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
         <td class="jd-linkcol">WRONG_PARAMS&nbsp;</td>
         <td class="jd-descrcol" width="100%">You have supplied wrong parameters.Use
@@ -936,6 +944,40 @@ From interface
       
   <div class="jd-tagdata jd-tagdescr"><p>The API returned an unexpected result. The raw body of the response
  is returned in
+ <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code>.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="BRIDGE"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+        final 
+        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
+      </span>
+        BRIDGE
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>The PAYMILL bridge returned an error. For the exact error check
+ <code><a href="../../../../com/paymill/android/service/PMError.html#getBridgeError()">getBridgeError()</a></code> . The
+ raw body of the response is returned in
  <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code>.
 </p></div>
 

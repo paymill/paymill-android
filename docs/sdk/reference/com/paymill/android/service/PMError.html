@@ -169,6 +169,7 @@
               
     <li><h2>Enums</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></li>
       </ul>
@@ -436,6 +437,18 @@ Summary:
          
         
         enum</nobr></td>
+      <td class="jd-linkcol"><a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></td>
+      <td class="jd-descrcol" width="100%">The type of the bridge error.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class=" api apilevel-" >
+      <td class="jd-typecol"><nobr>
+        
+         
+         
+        
+        enum</nobr></td>
       <td class="jd-linkcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></td>
       <td class="jd-descrcol" width="100%">Type of the error that the SDK returns
 &nbsp;</td>
@@ -591,6 +604,42 @@ android.os.Parcelable
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#PMError(java.lang.String, int)">PMError</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> message, int httpCode)</nobr>
+        
+        <div class="jd-descrdiv">Creates new PMError of type API.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#PMError(com.paymill.android.service.PMError.BridgeError, java.lang.String)">PMError</a></span>(<a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a> type, <a href="http://d.android.com/reference/java/lang/String.html">String</a> message)</nobr>
+        
+        <div class="jd-descrdiv">Creates new PMError of type BRIDGE.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#PMError(android.os.Parcel)">PMError</a></span>(<a href="http://d.android.com/reference/android/os/Parcel.html">Parcel</a> in)</nobr>
         
   </td></tr>
@@ -622,6 +671,42 @@ android.os.Parcelable
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#describeContents()">describeContents</a></span>()</nobr>
         
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#getBridgeError()">getBridgeError</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the exact BridgeError.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#getHttpCode()">getHttpCode</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Return the HTTP code of the request, caused this error.</div>
+  
   </td></tr>
 
 
@@ -1314,6 +1399,97 @@ From interface
 </div>
 
 
+<A NAME="PMError(java.lang.String, int)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">PMError</span>
+      <span class="normal">(<a href="http://d.android.com/reference/java/lang/String.html">String</a> message, int httpCode)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates new PMError of type API.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>message</td>
+          <td>the message</td>
+        </tr>
+        <tr>
+          <th>httpCode</td>
+          <td>the http code returned when generating this request. May be 0
+            or less, if none is available.
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="PMError(com.paymill.android.service.PMError.BridgeError, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">PMError</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a> type, <a href="http://d.android.com/reference/java/lang/String.html">String</a> message)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates new PMError of type BRIDGE.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>type</td>
+          <td>the exact bridge error type</td>
+        </tr>
+        <tr>
+          <th>message</td>
+          <td>the detailed message
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="PMError(android.os.Parcel)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1386,6 +1562,79 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getBridgeError()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a>
+      </span>
+      <span class="sympad">getBridgeError</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the exact BridgeError.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the exact bridge error or null if none is available
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getHttpCode()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">getHttpCode</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Return the HTTP code of the request, caused this error. <br/>
+ <b>Note:</b> The HTTP code exists only for API type errors.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the HTTP code or 0 or less if none is available.
+</li></ul>
+  </div>
 
     </div>
 </div>

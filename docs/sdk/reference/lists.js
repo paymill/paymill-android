@@ -27,9 +27,10 @@ var DATA = [
       { id:25, label:"com.paymill.android.listener.PMTransListener", link:"com/paymill/android/listener/PMTransListener.html", type:"class" },
       { id:26, label:"com.paymill.android.service", link:"com/paymill/android/service/package-summary.html", type:"package" },
       { id:27, label:"com.paymill.android.service.PMError", link:"com/paymill/android/service/PMError.html", type:"class" },
-      { id:28, label:"com.paymill.android.service.PMError.Type", link:"com/paymill/android/service/PMError.Type.html", type:"class" },
-      { id:29, label:"com.paymill.android.service.PMManager", link:"com/paymill/android/service/PMManager.html", type:"class" },
-      { id:30, label:"com.paymill.android.service.PMService", link:"com/paymill/android/service/PMService.html", type:"class" },
-      { id:31, label:"com.paymill.android.service.PMService.ServiceMode", link:"com/paymill/android/service/PMService.ServiceMode.html", type:"class" }
+      { id:28, label:"com.paymill.android.service.PMError.BridgeError", link:"com/paymill/android/service/PMError.BridgeError.html", type:"class" },
+      { id:29, label:"com.paymill.android.service.PMError.Type", link:"com/paymill/android/service/PMError.Type.html", type:"class" },
+      { id:30, label:"com.paymill.android.service.PMManager", link:"com/paymill/android/service/PMManager.html", type:"class" },
+      { id:31, label:"com.paymill.android.service.PMService", link:"com/paymill/android/service/PMService.html", type:"class" },
+      { id:32, label:"com.paymill.android.service.PMService.ServiceMode", link:"com/paymill/android/service/PMService.ServiceMode.html", type:"class" }
 
     ];
