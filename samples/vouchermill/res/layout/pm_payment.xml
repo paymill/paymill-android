@@ -30,14 +30,14 @@
                 android:background="@drawable/pm_switch_button_left"/>
 
             <RadioButton
-                android:id="@+id/elvButton"
+                android:id="@+id/directDebitButton"
                 style="@style/buttonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
                 android:gravity="center"
-                android:text="@string/pm_elv_button"
+                android:text="@string/pm_direct_debit_button"
                 android:background="@drawable/pm_switch_button_right" />
         </RadioGroup>
 
@@ -48,8 +48,8 @@
             android:layout_height="match_parent" />
 
         <FrameLayout
-            android:id="@+id/elvLayout"
-            android:name="com.paymill.android.payment.ElvFragment"
+            android:id="@+id/directDebitLayout"
+            android:name="com.paymill.android.payment.DirectDebitFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

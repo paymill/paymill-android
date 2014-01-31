@@ -8,7 +8,6 @@ import com.paymill.android.samples.vouchermill.R;
 
 public class ElvValidator {
 
-	static boolean valid;
 
 	private static boolean validateIsEmpty(String field) {
 		return TextUtils.isEmpty(field);
@@ -16,7 +15,7 @@ public class ElvValidator {
 
 	public static boolean validate(Context context, EditText name,
 			EditText accountNumber, EditText bankNumber) {
-		valid = true;
+		boolean valid = true;
 		valid = validateName(context, name) && valid;
 		valid = validateAccountNumber(context, accountNumber) && valid;
 		valid = validateBankNumber(context, bankNumber) && valid;

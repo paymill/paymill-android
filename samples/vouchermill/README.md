@@ -39,7 +39,7 @@ If you also want to change the layouts of the fragments you can change the pm_cr
 #### Reuse Fragments
 If you want to use the fragments in your own activity, you have to create them with the `instance` method specifying a valid [Settings](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/PaymentActivity.Settings.html) object. You also have to implement the `startRequest()` callback, that will receive the `PMPaymentMethod` object.
 #### Reuse validation logic.
-Use the [CreditCardValidator](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CreditCardValidator.html) and [CardTypeParser](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CardTypeParser) classes.
+Use the [CreditCardValidator](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CreditCardValidator.html) , [CardTypeParser](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/CardTypeParser) and [IbanBicValidator](http://paymill.github.io/paymill-android/docs/samples/vouchermill/reference/com/paymill/android/payment/IbanBicValidator) classes.
 
 ### Work with the PaymentActivity
 

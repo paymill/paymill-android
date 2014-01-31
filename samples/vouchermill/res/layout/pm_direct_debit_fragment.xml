@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:editText="http://schemas.android.com/apk/res/com.paymill.android.samples.vouchermill"
+    android:id="@+id/fragmentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
+    android:nextFocusDown="@+id/accountNumberText"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nameLabel"
+        style="@style/labelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/pm_dd_account_holder_label" />
+
+    <com.paymill.android.payment.CustomEditText
+        android:id="@+id/nameText"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="@string/pm_dd_account_holder_hint"
+        android:inputType="textCapWords"
+        android:nextFocusDown="@+id/fragmentHolder" />
+
+    <TextView
+        android:id="@+id/accountNumberLabel"
+        style="@style/labelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/pm_dd_account_number_label" />
+
+    <com.paymill.android.payment.CustomEditText
+        android:id="@+id/accountNumberText"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:inputType="textCapCharacters"
+        android:hint="@string/pm_dd_account_number_hint"
+        android:nextFocusDown="@+id/bankCodeText" />
+
+    <requestFocus />
+
+    <TextView
+        android:id="@+id/bankCodeLabel"
+        style="@style/labelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/pm_dd_bank_code_label" />
+
+    <com.paymill.android.payment.CustomEditText
+        android:id="@+id/bankCodeText"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ems="10"
+        android:hint="@string/pm_dd_bank_code_hint"
+        android:inputType="textCapCharacters" />
+
+    <Button
+        android:id="@+id/elv_trigger_btn"
+        style="@style/buttonStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="5dp"
+        android:text="@string/pm_dd_trigger_btn_default" />
+
+</LinearLayout>

@@ -28,7 +28,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:hint="@string/pm_cc_holder_name_hint"
-        android:inputType="text"
+        android:inputType="textCapWords"
         android:nextFocusDown="@+id/cardNumberText" />
 
     <requestFocus />

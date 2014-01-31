@@ -34,7 +34,7 @@ Android 2.2 (API Level 8).
 <dependency>
 	<groupId>com.paymill.android</groupId>
 	<artifactId>android-sdk</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 </dependency>         
 ```
 
@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-   compile 'com.paymill.android:android-sdk:1.0'
+   compile 'com.paymill.android:android-sdk:1.1'
 }       
 ```
 
@@ -159,6 +159,10 @@ protected void onDestroy() {
 
 
 ## Release notes
+
+### 1.1
++ Added new method to generate Payments using IBAN and BIC in the [PMFactory](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/factory/PMFactory.html) .
+* Improved error handling and added additional BRIDGE error type in PMError. You can use this to give the user conrecte information, why his card is rejected.
 
 ### 1.0
 + First live release.

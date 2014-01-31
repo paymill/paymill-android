@@ -1,5 +1,15 @@
 <resources>
-
+	<!-- Direct debit -->
+	
+    <string name="pm_dd_account_holder_label">Holder</string>
+    <string name="pm_dd_account_holder_hint">Account holder</string>
+	<string name="pm_dd_account_number_label">IBAN</string>
+    <string name="pm_dd_account_number_hint">IBAN number</string>
+    <string name="pm_dd_bank_code_label">BIC</string>
+    <string name="pm_dd_bank_code_hint">Bank identification code</string>
+    <string name="pm_invalid_ibanMSG">IBAN is not valid</string>
+    <string name="pm_invalid_bicMSG">BIC is not valid</string>
+    <string name="pm_dd_trigger_btn_default">@string/pm_trigger_default</string>
     <!-- ELV -->
     <string name="pm_elv_account_number_label">Account</string>
     <string name="pm_elv_account_number_hint">Account number</string>
@@ -25,7 +35,7 @@
     <string name="pm_emptyMSG">Field cannot be empty</string>
     <string name="pm_notAllowedCardMSG">Card type is not supported</string>
     <string name="pm_credit_card_button">Credit Card</string>
-    <string name="pm_elv_button">Direct Debit</string>
+    <string name="pm_direct_debit_button">Direct Debit</string>
     <string name="pm_trigger_payment">Pay</string>
     <string name="pm_trigger_preauth">Authorize</string>
     <string name="pm_trigger_default">Pay</string>

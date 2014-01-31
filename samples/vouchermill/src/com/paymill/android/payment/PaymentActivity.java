@@ -114,7 +114,7 @@ public class PaymentActivity extends FragmentActivity {
 	private static final String SELECTED_FRAGMENT_ID_KEY = "selectedfragment";
 	private RadioGroup radioGroup;
 	private FrameLayout creditCardLayout;
-	private FrameLayout elvLayout;
+	private FrameLayout directDebitLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -175,17 +175,17 @@ public class PaymentActivity extends FragmentActivity {
 		// check if screen rotated
 		fragmentManager = getSupportFragmentManager();
 		// add fragments
-		elvLayout = (FrameLayout) findViewById(R.id.elvLayout);
+		directDebitLayout = (FrameLayout) findViewById(R.id.directDebitLayout);
 		creditCardLayout = (FrameLayout) findViewById(R.id.creditCardLayout);
-		ElvFragment elvFragment = (ElvFragment) fragmentManager
-				.findFragmentById(R.id.elvLayout);
+		DirectDebitFragment directdebitFragment = (DirectDebitFragment) fragmentManager
+				.findFragmentById(R.id.directDebitLayout);
 		CreditCardFragment creditCardFragment = (CreditCardFragment) fragmentManager
 				.findFragmentById(R.id.creditCardLayout);
-		if (elvFragment == null) {
+		if (directdebitFragment == null) {
 			fragmentManager
 					.beginTransaction()
-					.add(R.id.elvLayout, ElvFragment.instance(pmSettings),
-							ElvFragment.FRAGMENT_TAG).commit();
+					.add(R.id.directDebitLayout, DirectDebitFragment.instance(pmSettings),
+							DirectDebitFragment.FRAGMENT_TAG).commit();
 		}
 		if (creditCardFragment == null) {
 			fragmentManager
@@ -202,7 +202,7 @@ public class PaymentActivity extends FragmentActivity {
 			if (pmSettings.isCreditCardPaymentAllowed()) {
 				showFragment(R.id.creditCardButton);
 			} else {
-				showFragment(R.id.elvButton);
+				showFragment(R.id.directDebitButton);
 			}
 		} else {
 			radioGroup
@@ -226,11 +226,11 @@ public class PaymentActivity extends FragmentActivity {
 		switch (fragmentId) {
 		case R.id.creditCardButton:
 			creditCardLayout.setVisibility(View.VISIBLE);
-			elvLayout.setVisibility(View.GONE);
+			directDebitLayout.setVisibility(View.GONE);
 			break;
-		case R.id.elvButton:
+		case R.id.directDebitButton:
 			creditCardLayout.setVisibility(View.GONE);
-			elvLayout.setVisibility(View.VISIBLE);
+			directDebitLayout.setVisibility(View.VISIBLE);
 			break;
 		default:
 			throw new IllegalArgumentException("Unkown id:" + fragmentId);

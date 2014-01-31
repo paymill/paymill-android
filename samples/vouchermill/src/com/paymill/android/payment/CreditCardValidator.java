@@ -18,7 +18,6 @@ import com.paymill.android.samples.vouchermill.R;
 public class CreditCardValidator {
 
 	private static final String TAG = "CreditCardValidator";
-	static boolean valid;
 
 	private static boolean validateIsEmpty(String field) {
 		return TextUtils.isEmpty(field);
@@ -27,7 +26,7 @@ public class CreditCardValidator {
 	public static boolean validate(Context context, EditText name,
 			EditText creditCardNumber, EditText dateText, EditText checkNumber,
 			CardType cardType, Collection<CardType> allowedCardTypes) {
-		valid = true;
+		boolean valid = true;
 		valid = validateName(context, name) && valid;
 		valid = validateCreditCardNumber(context, creditCardNumber, cardType,
 				allowedCardTypes) && valid;
