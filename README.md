@@ -162,6 +162,7 @@ protected void onDestroy() {
 
 ### 1.1
 + Added new method to generate Payments using IBAN and BIC in the [PMFactory](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/factory/PMFactory.html) .
++ Generating a token is now also possible without PMParams (using the new methods or just replacing with null).
 * Improved error handling and added additional BRIDGE error type in PMError. You can use this to give the user conrecte information, why his card is rejected.
 
 ### 1.0
