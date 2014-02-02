@@ -30,7 +30,7 @@ Android 2.2 (API Level 8).
 - Eclipse users add the `androi-sdk-1.0.jar` to their `libs/` folder.
 - Maven users add this dependency to their `pom.xml`:
 
-```
+```xml
 <dependency>
 	<groupId>com.paymill.android</groupId>
 	<artifactId>android-sdk</artifactId>
@@ -55,7 +55,7 @@ dependencies {
 You will also have to add the following service definition inside the application tag in your `AndroidManifest.xml`:
 
 
-```
+```xml
  <!-- paymill sdk service -->
  <service android:name="com.paymill.android.service.PMService"
          android:enabled="true" android:exported="false">
@@ -91,7 +91,7 @@ A [PMPaymentMethod](http://paymill.github.io/paymill-android/docs/sdk/reference/
 
 Create [PMPaymentMethod](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/factory/PMPaymentMethod.html) and [PMPaymentParams](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/factory/PMPaymentParams.html), add listeners and call [PMManager.generateToken()](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html#generateToken%28android.content.Context,%20com.paymill.android.factory.PMPaymentMethod,%20com.paymill.android.factory.PMPaymentParams,%20com.paymill.android.service.PMService.ServiceMode,%20java.lang.String%29) with your PAYMILL public key and mode.
 
-```
+```java
 protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
   PMManager.addListener(listener);
@@ -124,7 +124,7 @@ protected void onDestroy() {
 
 To create transactions and preauthorizations directly from the SDK you first need to install the Mobile App. In the code you will have to initialize the SDK, by calling [PMManager.init()](http://paymill.github.io/paymill-android/docs/sdk//reference/com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String) method with your PAYMILL public key and mode.
 
-```
+```java
 // init the sdk as soon as possible
 PMManager.init(getApplicationContext(), PMService.ServiceMode.TEST, "yourpublickey",null, null);
 ......
