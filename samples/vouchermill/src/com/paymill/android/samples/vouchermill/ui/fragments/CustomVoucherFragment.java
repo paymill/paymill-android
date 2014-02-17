@@ -48,19 +48,16 @@ public class CustomVoucherFragment extends SherlockFragment implements
 	public PMPaymentParams getInfo() throws VoucherInfoValidationException {
 		boolean valid = true;
 		if (TextUtils.isEmpty(currencyEditText.getText())) {
-			// TODO set error from string
-			currencyEditText.setError("");
+			currencyEditText.setError(getActivity().getString(R.string.pm_emptyMSG));
 			valid = false;
 		}
 		if (TextUtils.isEmpty(amountEditText.getText())
 				|| !TextUtils.isDigitsOnly(amountEditText.getText())) {
-			// TODO set error from string
-			amountEditText.setError("");
+			amountEditText.setError(getActivity().getString(R.string.pm_emptyMSG));
 			valid = false;
 		}
 		if (TextUtils.isEmpty(descriptionEditText.getText())) {
-			// TODO set error from string
-			descriptionEditText.setError("");
+			descriptionEditText.setError(getActivity().getString(R.string.pm_emptyMSG));
 			valid = false;
 		}
 		if (!valid) {
