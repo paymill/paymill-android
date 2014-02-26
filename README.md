@@ -27,7 +27,7 @@ Android 2.2 (API Level 8).
 
 ## Installation
 
-- Eclipse users add the `androi-sdk-1.0.jar` to their `libs/` folder.
+- Eclipse users add the `androi-sdk-1.1.jar` to their `libs/` folder.
 - Maven users add this dependency to their `pom.xml`:
 
 ```xml
