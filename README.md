@@ -27,14 +27,14 @@ Android 2.2 (API Level 8).
 
 ## Installation
 
-- Eclipse users add the `androi-sdk-1.1.jar` to their `libs/` folder.
+- Eclipse users add the `androi-sdk-1.1.1.jar` to their `libs/` folder.
 - Maven users add this dependency to their `pom.xml`:
 
 ```xml
 <dependency>
 	<groupId>com.paymill.android</groupId>
 	<artifactId>android-sdk</artifactId>
-	<version>1.1</version>
+	<version>1.1.1</version>
 </dependency>         
 ```
 
@@ -159,6 +159,10 @@ protected void onDestroy() {
 
 
 ## Release notes
+
+### 1.1.1
+
+* Mandatory changes in infrastructure
 
 ### 1.1
 + Added new method to generate Payments using IBAN and BIC in the [PMFactory](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/factory/PMFactory.html) .
