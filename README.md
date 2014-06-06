@@ -27,14 +27,14 @@ Android 2.2 (API Level 8).
 
 ## Installation
 
-- Eclipse users add the `androi-sdk-1.1.1.jar` to their `libs/` folder.
+- Eclipse users add the `androi-sdk-1.2.0.jar` to their `libs/` folder.
 - Maven users add this dependency to their `pom.xml`:
 
 ```xml
 <dependency>
 	<groupId>com.paymill.android</groupId>
 	<artifactId>android-sdk</artifactId>
-	<version>1.1.1</version>
+	<version>1.2.0</version>
 </dependency>         
 ```
 
@@ -159,6 +159,12 @@ protected void onDestroy() {
 
 
 ## Release notes
+
+### 1.2.0
+
++ Added new methods to create transactions and preauthorizations with a payment object.
++ Added a Safe Store to securely save payment objects with a user password.
++ Added the possibility to turn off or style the foreground notification.
 
 ### 1.1.1
 
