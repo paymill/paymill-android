@@ -158,6 +158,11 @@
           <div id="classes-nav">
             <ul>
               
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.NotificationBuilder.html">PMService.NotificationBuilder</a></li>
+      </ul>
+    </li>
               
     <li><h2>Classes</h2>
       <ul>
@@ -170,6 +175,7 @@
     <li><h2>Enums</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></li>
       </ul>
@@ -449,6 +455,18 @@ Summary:
          
         
         enum</nobr></td>
+      <td class="jd-linkcol"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></td>
+      <td class="jd-descrcol" width="100%">The type of the safe store error.&nbsp;</td>
+    </tr>
+    
+    
+    <tr class="alt-color api apilevel-" >
+      <td class="jd-typecol"><nobr>
+        
+         
+         
+        
+        enum</nobr></td>
       <td class="jd-linkcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></td>
       <td class="jd-descrcol" width="100%">Type of the error that the SDK returns
 &nbsp;</td>
@@ -640,6 +658,24 @@ android.os.Parcelable
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#PMError(com.paymill.android.service.PMError.SafeStoreError, java.lang.String)">PMError</a></span>(<a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a> type, <a href="http://d.android.com/reference/java/lang/String.html">String</a> message)</nobr>
+        
+        <div class="jd-descrdiv">Creates new PMError of type SAFE_STORE.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#PMError(android.os.Parcel)">PMError</a></span>(<a href="http://d.android.com/reference/android/os/Parcel.html">Parcel</a> in)</nobr>
         
   </td></tr>
@@ -736,6 +772,24 @@ android.os.Parcelable
             
             
             
+            <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.html#getSafeStoreError()">getSafeStoreError</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the exact SafeStoreError.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -747,7 +801,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -763,7 +817,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -779,7 +833,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1490,6 +1544,51 @@ From interface
 </div>
 
 
+<A NAME="PMError(com.paymill.android.service.PMError.SafeStoreError, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">PMError</span>
+      <span class="normal">(<a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a> type, <a href="http://d.android.com/reference/java/lang/String.html">String</a> message)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates new PMError of type SAFE_STORE.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>type</td>
+          <td>the exact safe store error type</td>
+        </tr>
+        <tr>
+          <th>message</td>
+          <td>the detailed message
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="PMError(android.os.Parcel)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1672,6 +1771,42 @@ From interface
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>an empty string or the detail message
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getSafeStoreError()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>
+      </span>
+      <span class="sympad">getSafeStoreError</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the exact SafeStoreError.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>the exact safe store error or null if none is available
 </li></ul>
   </div>
 

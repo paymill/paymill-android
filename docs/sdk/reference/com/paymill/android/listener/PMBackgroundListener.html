@@ -169,10 +169,15 @@
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMInitListener.html">PMInitListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListPaymentsListener.html">PMListPaymentsListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMPaymentDeletedListener.html">PMPaymentDeletedListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMPaymentsAvailListener.html">PMPaymentsAvailListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMPaymentSavedListener.html">PMPaymentSavedListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMResetPaymentsListener.html">PMResetPaymentsListener</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a></li>
       </ul>
     </li>
@@ -217,6 +222,41 @@
 <div id="api-info-block">
 
 
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
+
+  
+   
+  
+  
+  
+  
 
   
    
@@ -375,13 +415,23 @@ Summary:
       
         <a href="../../../../com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a> 
       
+        <a href="../../../../com/paymill/android/listener/PMListPaymentsListener.html">PMListPaymentsListener</a> 
+      
         <a href="../../../../com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a> 
       
         <a href="../../../../com/paymill/android/listener/PMListTransListener.html">PMListTransListener</a> 
       
         <a href="../../../../com/paymill/android/listener/PMNewDeviceIdListener.html">PMNewDeviceIdListener</a> 
       
+        <a href="../../../../com/paymill/android/listener/PMPaymentDeletedListener.html">PMPaymentDeletedListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMPaymentSavedListener.html">PMPaymentSavedListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMPaymentsAvailListener.html">PMPaymentsAvailListener</a> 
+      
         <a href="../../../../com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a> 
+      
+        <a href="../../../../com/paymill/android/listener/PMResetPaymentsListener.html">PMResetPaymentsListener</a> 
       
         <a href="../../../../com/paymill/android/listener/PMTransListener.html">PMTransListener</a> 
       
@@ -987,6 +1037,68 @@ From interface
 
 <tr class="api apilevel-" >
 <td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListPaymentsListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMListPaymentsListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMListPaymentsListener.html">com.paymill.android.listener.PMListPaymentsListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMListPaymentsListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMListPaymentsListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMListPaymentsListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListPaymentsListener.html#onListPayments(java.util.Collection<com.paymill.android.api.Payment>)">onListPayments</a></span>(<a href="http://d.android.com/reference/java/util/Collection.html">Collection</a>&lt;<a href="../../../../com/paymill/android/api/Payment.html">Payment</a>&gt; payments)</nobr>
+        
+        <div class="jd-descrdiv">Called when the list of payments was successfully retrieved.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMListPaymentsListener.html#onListPaymentsFailed(com.paymill.android.service.PMError)">onListPaymentsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called when the list of payments was not retrieved.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener" class="jd-expando-trigger closed"
           ><img id="inherited-methods-com.paymill.android.listener.PMListPreauthsListener-trigger"
           src="../../../../../assets/images/triangle-closed.png"
@@ -1173,6 +1285,192 @@ From interface
 
 <tr class="api apilevel-" >
 <td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMPaymentDeletedListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMPaymentDeletedListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMPaymentDeletedListener.html">com.paymill.android.listener.PMPaymentDeletedListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMPaymentDeletedListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentDeletedListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentDeletedListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentDeletedListener.html#onPaymentDeleted(com.paymill.android.api.Payment)">onPaymentDeleted</a></span>(<a href="../../../../com/paymill/android/api/Payment.html">Payment</a> payment)</nobr>
+        
+        <div class="jd-descrdiv">Called when the payment has been successfully deleted.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentDeletedListener.html#onPaymentDeletedFailed(com.paymill.android.service.PMError)">onPaymentDeletedFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called when the payment has not been successfully deleted.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMPaymentSavedListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMPaymentSavedListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMPaymentSavedListener.html">com.paymill.android.listener.PMPaymentSavedListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMPaymentSavedListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentSavedListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentSavedListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentSavedListener.html#onPaymentSaved(com.paymill.android.api.Payment)">onPaymentSaved</a></span>(<a href="../../../../com/paymill/android/api/Payment.html">Payment</a> payment)</nobr>
+        
+        <div class="jd-descrdiv">Called when the payment has been successfully saved.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentSavedListener.html#onPaymentSavedFailed(com.paymill.android.service.PMError)">onPaymentSavedFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called when the payment has not been successfully saved.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMPaymentsAvailListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMPaymentsAvailListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMPaymentsAvailListener.html">com.paymill.android.listener.PMPaymentsAvailListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMPaymentsAvailListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentsAvailListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMPaymentsAvailListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentsAvailListener.html#onPaymentsAvaialable(boolean)">onPaymentsAvaialable</a></span>(boolean available)</nobr>
+        
+        <div class="jd-descrdiv">Called when payments availability status is retrieved.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPaymentsAvailListener.html#onPaymentsAvaialableFailed(com.paymill.android.service.PMError)">onPaymentsAvaialableFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called when the arePaymentsAvailable() call fails.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMPreauthListener" class="jd-expando-trigger closed"
           ><img id="inherited-methods-com.paymill.android.listener.PMPreauthListener-trigger"
           src="../../../../../assets/images/triangle-closed.png"
@@ -1222,6 +1520,69 @@ From interface
         <span class="sympad"><a href="../../../../com/paymill/android/listener/PMPreauthListener.html#onPreauthFailed(com.paymill.android.service.PMError)">onPreauthFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
         
         <div class="jd-descrdiv">Called on unsuccessful retrieval.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.paymill.android.listener.PMResetPaymentsListener" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.paymill.android.listener.PMResetPaymentsListener-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../com/paymill/android/listener/PMResetPaymentsListener.html">com.paymill.android.listener.PMResetPaymentsListener</a>
+
+<div id="inherited-methods-com.paymill.android.listener.PMResetPaymentsListener">
+  <div id="inherited-methods-com.paymill.android.listener.PMResetPaymentsListener-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-com.paymill.android.listener.PMResetPaymentsListener-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMResetPaymentsListener.html#onResetPayments(boolean)">onResetPayments</a></span>(boolean result)</nobr>
+        
+        <div class="jd-descrdiv">Called when the payments were successfully reset.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/listener/PMResetPaymentsListener.html#onResetPaymentsFailed(com.paymill.android.service.PMError)">onResetPaymentsFailed</a></span>(<a href="../../../../com/paymill/android/service/PMError.html">PMError</a> error)</nobr>
+        
+        <div class="jd-descrdiv">Called when there was an error and the payments were not successfully
+ reset.</div>
   
   </td></tr>
 

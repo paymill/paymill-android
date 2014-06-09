@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" />
 <title>
 
-  PMError.Type
+  PMError.SafeStoreError
 
 
 | PayMill Android SDK
@@ -175,8 +175,8 @@
     <li><h2>Enums</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.BridgeError.html">PMError.BridgeError</a></li>
-          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></li>
-          <li class="selected api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
+          <li class="selected api apilevel-"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></li>
+          <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></li>
           <li class="api apilevel-"><a href="../../../../com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></li>
       </ul>
     </li>
@@ -298,7 +298,7 @@ Summary:
     final 
     
     enum
-<h1>PMError.Type</h1>
+<h1>PMError.SafeStoreError</h1>
 
 
 
@@ -345,7 +345,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">com.paymill.android.service.PMError.Type</td>
+        <td colspan="1" class="jd-inheritance-class-cell">com.paymill.android.service.PMError.SafeStoreError</td>
     </tr>
     
 
@@ -361,7 +361,9 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Type of the error that the SDK returns
+<p>The type of the safe store error. <br/>
+ <b>Note:</b> This list does not contain all messages, rather messages
+ 
 </p>
 
 
@@ -405,52 +407,25 @@ Summary:
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">API&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The API returned an unexpected result.&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>&nbsp;</td>
+        <td class="jd-linkcol">SAFE_STORE_BLOCKED&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Safe store: password blocked
+&nbsp;</td>
     </tr>
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">BRIDGE&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The PAYMILL bridge returned an error.&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>&nbsp;</td>
+        <td class="jd-linkcol">SAFE_STORE_INCORRECT_PASSWORD&nbsp;</td>
+        <td class="jd-descrcol" width="100%">Safe store: incorrect password
+&nbsp;</td>
     </tr>
     
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">INTERNAL&nbsp;</td>
-        <td class="jd-descrcol" width="100%">Used for internal errors.&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">IO&nbsp;</td>
-        <td class="jd-descrcol" width="100%">There was an error while connecting to the PayMill Service.&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">NOT_INIT&nbsp;</td>
-        <td class="jd-descrcol" width="100%">You did not initialize the SDK.&nbsp;</td>
-    </tr>
-    
-    
-    <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">SAFE_STORE&nbsp;</td>
-        <td class="jd-descrcol" width="100%">The PAYMILL safe store returned an error.&nbsp;</td>
-    </tr>
-    
-    
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>&nbsp;</td>
-        <td class="jd-linkcol">WRONG_PARAMS&nbsp;</td>
-        <td class="jd-descrcol" width="100%">You have supplied wrong parameters.Use
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code> for details.&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>&nbsp;</td>
+        <td class="jd-linkcol">UNKNOWN&nbsp;</td>
+        <td class="jd-descrcol" width="100%">The error message cannot be mapped to any enum.&nbsp;</td>
     </tr>
     
     
@@ -485,10 +460,10 @@ Summary:
             
             static
             
-            <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a></nobr>
+            <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.Type.html#valueOf(java.lang.String)">valueOf</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> name)</nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html#valueOf(java.lang.String)">valueOf</a></span>(<a href="http://d.android.com/reference/java/lang/String.html">String</a> name)</nobr>
         
   </td></tr>
 
@@ -501,10 +476,10 @@ Summary:
             final
             static
             
-            <a href="../../../../com/paymill/android/service/PMError.Type.html">Type[]</a></nobr>
+            <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">SafeStoreError[]</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.Type.html#values()">values</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html#values()">values</a></span>()</nobr>
         
   </td></tr>
 
@@ -933,7 +908,7 @@ From interface
 
 
 
-<A NAME="API"></A>
+<A NAME="SAFE_STORE_BLOCKED"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -941,9 +916,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>
       </span>
-        API
+        SAFE_STORE_BLOCKED
     </h4>
       <div class="api-level">
         
@@ -955,9 +930,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The API returned an unexpected result. The raw body of the response
- is returned in
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code>.
+  <div class="jd-tagdata jd-tagdescr"><p>Safe store: password blocked
 </p></div>
 
     
@@ -966,7 +939,7 @@ From interface
 
 
 
-<A NAME="BRIDGE"></A>
+<A NAME="SAFE_STORE_INCORRECT_PASSWORD"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -974,9 +947,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>
       </span>
-        BRIDGE
+        SAFE_STORE_INCORRECT_PASSWORD
     </h4>
       <div class="api-level">
         
@@ -988,10 +961,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The PAYMILL bridge returned an error. For the exact error check
- <code><a href="../../../../com/paymill/android/service/PMError.html#getBridgeError()">getBridgeError()</a></code> . The
- raw body of the response is returned in
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code>.
+  <div class="jd-tagdata jd-tagdescr"><p>Safe store: incorrect password
 </p></div>
 
     
@@ -1000,7 +970,7 @@ From interface
 
 
 
-<A NAME="INTERNAL"></A>
+<A NAME="UNKNOWN"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1008,9 +978,9 @@ From interface
         public 
         static 
         final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>
       </span>
-        INTERNAL
+        UNKNOWN
     </h4>
       <div class="api-level">
         
@@ -1022,141 +992,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Used for internal errors. These should never happen.</br> If you
- encounter one of these, please send an email with a description of
- what you were doing and the message to <a href=
- "mailto:support@paymill.com?Subject=Android%20SDK%20Internal%20Error"
- >support@paymill.com</a>.</br> Thank You!
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="IO"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
-      </span>
-        IO
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>There was an error while connecting to the PayMill Service. Use
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code> for details.
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="NOT_INIT"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
-      </span>
-        NOT_INIT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>You did not initialize the SDK. Run
- <code><a href="../../../../com/paymill/android/service/PMManager.html#init(android.content.Context, com.paymill.android.service.PMService.ServiceMode, java.lang.String, com.paymill.android.listener.PMBackgroundListener, java.lang.String)">init</a></code> first.
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="SAFE_STORE"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
-      </span>
-        SAFE_STORE
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>The PAYMILL safe store returned an error. For the exact error check
- <code><a href="../../../../com/paymill/android/service/PMError.html#getSafeStoreError()">getSafeStoreError()</a></code> . The
- raw body of the response is returned in
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code>.
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-<A NAME="WRONG_PARAMS"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
-      </span>
-        WRONG_PARAMS
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>You have supplied wrong parameters.Use
- <code><a href="../../../../com/paymill/android/service/PMError.html#getMessage()">getMessage()</a></code> for details.
+  <div class="jd-tagdata jd-tagdescr"><p>The error message cannot be mapped to any enum. There is no usefull
+ information to show the end user. Detailed (developer) message will
+ be included in PMError#getMessage()
 </p></div>
 
     
@@ -1198,7 +1036,7 @@ From interface
          
          
          
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">PMError.Type</a>
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a>
       </span>
       <span class="sympad">valueOf</span>
       <span class="normal">(<a href="http://d.android.com/reference/java/lang/String.html">String</a> name)</span>
@@ -1229,7 +1067,7 @@ From interface
         final 
          
          
-        <a href="../../../../com/paymill/android/service/PMError.Type.html">Type[]</a>
+        <a href="../../../../com/paymill/android/service/PMError.SafeStoreError.html">SafeStoreError[]</a>
       </span>
       <span class="sympad">values</span>
       <span class="normal">()</span>

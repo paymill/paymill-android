@@ -1223,13 +1223,23 @@
 </implements>
 <implements name="com.paymill.android.listener.PMListNotConsTransListener">
 </implements>
+<implements name="com.paymill.android.listener.PMListPaymentsListener">
+</implements>
 <implements name="com.paymill.android.listener.PMListPreauthsListener">
 </implements>
 <implements name="com.paymill.android.listener.PMListTransListener">
 </implements>
 <implements name="com.paymill.android.listener.PMNewDeviceIdListener">
 </implements>
+<implements name="com.paymill.android.listener.PMPaymentDeletedListener">
+</implements>
+<implements name="com.paymill.android.listener.PMPaymentSavedListener">
+</implements>
+<implements name="com.paymill.android.listener.PMPaymentsAvailListener">
+</implements>
 <implements name="com.paymill.android.listener.PMPreauthListener">
+</implements>
+<implements name="com.paymill.android.listener.PMResetPaymentsListener">
 </implements>
 <implements name="com.paymill.android.listener.PMTransListener">
 </implements>
@@ -1506,6 +1516,40 @@
 </parameter>
 </method>
 </interface>
+<interface name="PMListPaymentsListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onListPayments"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="payments" type="java.util.Collection&lt;com.paymill.android.api.Payment&gt;">
+</parameter>
+</method>
+<method name="onListPaymentsFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="error" type="com.paymill.android.service.PMError">
+</parameter>
+</method>
+</interface>
 <interface name="PMListPreauthsListener"
  abstract="true"
  static="false"
@@ -1608,6 +1652,108 @@
 </parameter>
 </method>
 </interface>
+<interface name="PMPaymentDeletedListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onPaymentDeleted"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+</method>
+<method name="onPaymentDeletedFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="error" type="com.paymill.android.service.PMError">
+</parameter>
+</method>
+</interface>
+<interface name="PMPaymentSavedListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onPaymentSaved"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+</method>
+<method name="onPaymentSavedFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="error" type="com.paymill.android.service.PMError">
+</parameter>
+</method>
+</interface>
+<interface name="PMPaymentsAvailListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onPaymentsAvaialable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="available" type="boolean">
+</parameter>
+</method>
+<method name="onPaymentsAvaialableFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="error" type="com.paymill.android.service.PMError">
+</parameter>
+</method>
+</interface>
 <interface name="PMPreauthListener"
  abstract="true"
  static="false"
@@ -1629,6 +1775,40 @@
 </parameter>
 </method>
 <method name="onPreauthFailed"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="error" type="com.paymill.android.service.PMError">
+</parameter>
+</method>
+</interface>
+<interface name="PMResetPaymentsListener"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onResetPayments"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="result" type="boolean">
+</parameter>
+</method>
+<method name="onResetPaymentsFailed"
  return="void"
  abstract="true"
  native="false"
@@ -1742,6 +1922,18 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="type" type="com.paymill.android.service.PMError.SafeStoreError">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="PMError"
+ type="com.paymill.android.service.PMError"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 <parameter name="in" type="android.os.Parcel">
 </parameter>
 </constructor>
@@ -1769,6 +1961,17 @@
 </method>
 <method name="getHttpCode"
  return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSafeStoreError"
+ return="com.paymill.android.service.PMError.SafeStoreError"
  abstract="false"
  native="false"
  synchronized="false"
@@ -1861,6 +2064,39 @@
 >
 </method>
 </class>
+<class name="PMError.SafeStoreError"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="com.paymill.android.service.PMError.SafeStoreError"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="com.paymill.android.service.PMError.SafeStoreError[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="PMError.Type"
  extends="java.lang.Enum"
  abstract="false"
@@ -1926,6 +2162,71 @@
  visibility="public"
 >
 <parameter name="listener" type="com.paymill.android.listener.PMGenerateTokenListener">
+</parameter>
+</method>
+<method name="addListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentSavedListener">
+</parameter>
+</method>
+<method name="addListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentDeletedListener">
+</parameter>
+</method>
+<method name="addListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMListPaymentsListener">
+</parameter>
+</method>
+<method name="addListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMResetPaymentsListener">
+</parameter>
+</method>
+<method name="addListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentsAvailListener">
 </parameter>
 </method>
 <method name="addListener"
@@ -2071,6 +2372,19 @@
 <parameter name="listener" type="com.paymill.android.listener.PMNewDeviceIdListener">
 </parameter>
 </method>
+<method name="arePaymentsAvailable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
 <method name="consumePreauthorization"
  return="void"
  abstract="false"
@@ -2129,6 +2443,40 @@
 <parameter name="context" type="android.content.Context">
 </parameter>
 <parameter name="transaction" type="com.paymill.android.api.Transaction">
+</parameter>
+</method>
+<method name="deletePayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+<parameter name="password" type="java.lang.String">
+</parameter>
+</method>
+<method name="deletePayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="paymentId" type="java.lang.String">
+</parameter>
+<parameter name="password" type="java.lang.String">
 </parameter>
 </method>
 <method name="generateToken"
@@ -2216,6 +2564,17 @@
 </method>
 <method name="getDeviceId"
  return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getForegroundNotificationBuilder"
+ return="com.paymill.android.service.PMService.NotificationBuilder"
  abstract="false"
  native="false"
  synchronized="false"
@@ -2326,6 +2685,17 @@
 <parameter name="deviceId" type="java.lang.String">
 </parameter>
 </method>
+<method name="isForegroundEnabled"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="isInit"
  return="boolean"
  abstract="false"
@@ -2336,6 +2706,21 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="listPayments"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="password" type="java.lang.String">
+</parameter>
 </method>
 <method name="listPreauthorizations"
  return="void"
@@ -2401,6 +2786,44 @@
 <parameter name="consumable" type="boolean">
 </parameter>
 </method>
+<method name="preauthorizationWithPayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="paymentId" type="java.lang.String">
+</parameter>
+<parameter name="parameters" type="com.paymill.android.factory.PMPaymentParams">
+</parameter>
+<parameter name="consumable" type="boolean">
+</parameter>
+</method>
+<method name="preauthorizationWithPayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+<parameter name="parameters" type="com.paymill.android.factory.PMPaymentParams">
+</parameter>
+<parameter name="consumable" type="boolean">
+</parameter>
+</method>
 <method name="removeListener"
  return="void"
  abstract="false"
@@ -2425,6 +2848,71 @@
  visibility="public"
 >
 <parameter name="listener" type="com.paymill.android.listener.PMGenerateTokenListener">
+</parameter>
+</method>
+<method name="removeListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentSavedListener">
+</parameter>
+</method>
+<method name="removeListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentDeletedListener">
+</parameter>
+</method>
+<method name="removeListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMListPaymentsListener">
+</parameter>
+</method>
+<method name="removeListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMResetPaymentsListener">
+</parameter>
+</method>
+<method name="removeListener"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="listener" type="com.paymill.android.listener.PMPaymentsAvailListener">
 </parameter>
 </method>
 <method name="removeListener"
@@ -2570,6 +3058,36 @@
 <parameter name="listener" type="com.paymill.android.listener.PMNewDeviceIdListener">
 </parameter>
 </method>
+<method name="resetPayments"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+</method>
+<method name="savePayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+<parameter name="password" type="java.lang.String">
+</parameter>
+</method>
 <method name="setBackgroundListener"
  return="void"
  abstract="false"
@@ -2581,6 +3099,32 @@
  visibility="public"
 >
 <parameter name="backgroundListener" type="com.paymill.android.listener.PMBackgroundListener">
+</parameter>
+</method>
+<method name="setForegroundEnabled"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="foregroundEnabled" type="boolean">
+</parameter>
+</method>
+<method name="setForegroundNotificationBuilder"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="foregroundNotificationBuilder" type="com.paymill.android.service.PMService.NotificationBuilder">
 </parameter>
 </method>
 <method name="transaction"
@@ -2621,6 +3165,44 @@
 <parameter name="consumable" type="boolean">
 </parameter>
 </method>
+<method name="transactionWithPayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="paymentId" type="java.lang.String">
+</parameter>
+<parameter name="parameters" type="com.paymill.android.factory.PMPaymentParams">
+</parameter>
+<parameter name="consumable" type="boolean">
+</parameter>
+</method>
+<method name="transactionWithPayment"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="android.content.Context">
+</parameter>
+<parameter name="payment" type="com.paymill.android.api.Payment">
+</parameter>
+<parameter name="parameters" type="com.paymill.android.factory.PMPaymentParams">
+</parameter>
+<parameter name="consumable" type="boolean">
+</parameter>
+</method>
 </class>
 <class name="PMService"
  extends="android.app.Service"
@@ -2652,6 +3234,25 @@
 </parameter>
 </method>
 </class>
+<interface name="PMService.NotificationBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getForegroundNotification"
+ return="android.app.Notification"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
 <class name="PMService.ServiceMode"
  extends="java.lang.Enum"
  abstract="false"

@@ -265,13 +265,19 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/service/PMError.SafeStoreError.html">PMError.SafeStoreError</a></td>
+            <td class="jd-descrcol" width="100%">The type of the safe store error.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/service/PMError.Type.html">PMError.Type</a></td>
             <td class="jd-descrcol" width="100%">Type of the error that the SDK returns
 &nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/factory/PMFactory.html">PMFactory</a></td>
             <td class="jd-descrcol" width="100%">Use only this factory class to create a
  <code><a href="./com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a></code> and
@@ -279,52 +285,59 @@
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMGenerateTokenListener.html">PMGenerateTokenListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a token has
  been generated.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMGetPreauthListener.html">PMGetPreauthListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
  <code><a href="./com/paymill/android/api/Preauthorization.html">preauthorization</a></code> has been retrieved.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMGetTransListener.html">PMGetTransListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
  <code><a href="./com/paymill/android/api/Transaction.html">transaction</a></code> has been retrieved.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMInitListener.html">PMInitListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when the SDK has
  been initialized.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMListNotConsPreauthsListener.html">PMListNotConsPreauthsListener</a></td>
-            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when the list of of
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when the list of
  not consumed <code><a href="./com/paymill/android/api/Preauthorization.html">preauthorizations</a></code> has been retrieved.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMListNotConsTransListener.html">PMListNotConsTransListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when the list of of
  not consumed <code><a href="./com/paymill/android/api/Transaction.html">transactions</a></code> has been retrieved.&nbsp;</td>
         </tr>
     
     
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMListPaymentsListener.html">PMListPaymentsListener</a></td>
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a list of
+ <code><a href="./com/paymill/android/api/Payment.html">payments</a></code> has been received from the Safe Store.&nbsp;</td>
+        </tr>
+    
+    
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMListPreauthsListener.html">PMListPreauthsListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when the list of of
- <code><a href="./com/paymill/android/api/Preauthorization.html">preauthorizations</a></code> has been retrieved.&nbsp;</td>
+ <code><a href="./com/paymill/android/api/Preauthorization.html">preauthorizations</a></code> has been retrieved from the Safe Store.&nbsp;</td>
         </tr>
     
     
@@ -348,23 +361,54 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMPaymentDeletedListener.html">PMPaymentDeletedListener</a></td>
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
+ <code><a href="./com/paymill/android/api/Payment.html">payment</a></code> has been deleted from the Safe
+ Store.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/factory/PMPaymentMethod.html">PMPaymentMethod</a></td>
             <td class="jd-descrcol" width="100%">Object representing the payment method needed to create new Transactions and
  Preauthorizations.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/factory/PMPaymentParams.html">PMPaymentParams</a></td>
             <td class="jd-descrcol" width="100%">Object representing the parameters needed to create new Transactions and
  Preauthorizations.&nbsp;</td>
         </tr>
     
     
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMPaymentsAvailListener.html">PMPaymentsAvailListener</a></td>
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed for the result of a 
+ <code><a href="./com/paymill/android/service/PMManager.html#arePaymentsAvailable(android.content.Context)">arePaymentsAvailable</a></code> call
+ that checks for payments availability on the Safe Store.&nbsp;</td>
+        </tr>
+    
+    
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMPaymentSavedListener.html">PMPaymentSavedListener</a></td>
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
+ <code><a href="./com/paymill/android/api/Payment.html">payment</a></code> has been saved on the Safe
+ Store.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMPreauthListener.html">PMPreauthListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
  <code><a href="./com/paymill/android/api/Preauthorization.html">preauthorization</a></code> has been created.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMResetPaymentsListener.html">PMResetPaymentsListener</a></td>
+            <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed for the result of a
+ <code><a href="./com/paymill/android/service/PMManager.html#resetPayments(android.content.Context)">resetPayments</a></code> call that resets the password and payments on the Safe Store.&nbsp;</td>
         </tr>
     
     
@@ -386,19 +430,28 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./com/paymill/android/service/PMService.NotificationBuilder.html">PMService.NotificationBuilder</a></td>
+            <td class="jd-descrcol" width="100%">Delivers notifications for the foreground mode of the
+ <code><a href="./com/paymill/android/service/PMService.html">PMService</a></code>
+ 
+&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/service/PMService.ServiceMode.html">PMService.ServiceMode</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/listener/PMTransListener.html">PMTransListener</a></td>
             <td class="jd-descrcol" width="100%">Implement this interface in your UI to be kept informed, when a
  <code><a href="./com/paymill/android/api/Transaction.html">transaction</a></code> has been created.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./com/paymill/android/api/Preauthorization.html">Preauthorization</a></td>
             <td class="jd-descrcol" width="100%">&nbsp;</td>
         </tr>
