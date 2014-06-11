@@ -157,6 +157,32 @@ protected void onDestroy() {
 }
 ```
 
+### Customizing notification.
+
+To ensure that your app does not get killed while the SDK is processing a payment ( or an important task you complete in your Background Listener) we keep the PMService in foreground mode in this time frame. In versions prior 4.3 the foreground notification was not shown to your customer. Unfortunately, since 4.3 Android will always show the notification. To help you customize the appearance, we now let you customize the notification, as well as turn foreground mode completely. Please note, turning off foreground mode effects the reliability of your app.
+
+```java
+
+{
+....
+PMManager.setForegroundEnabled(true); // turn on the foreground notification (default is true / on)
+NotificationBuilder builder = new NotificationBuilder() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public Notification getForegroundNotification() {
+				// use NotificationCompat.Builder if you target Android < 4
+			 	return new Notification.Builder(mContext) 
+			         .setContentTitle("Processing payment")
+			         .setContentText("My app is processing your payment")
+			         .setSmallIcon(R.drawable.ic_launcher)
+			         .build();
+			}
+		};
+PMManager.setForegroundNotificationBuilder(builder);
+...
+}
+```
 
 ## Release notes
 
