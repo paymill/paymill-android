@@ -33,6 +33,12 @@ public class ElvFragment extends Fragment {
 	}
 
 	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		pmSettings = getArguments().getParcelable(
@@ -52,12 +58,12 @@ public class ElvFragment extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				if (ElvValidator.validate(getActivity(), accountHolder, accountNumber,
-						bankNumber)) {
-					PMPaymentMethod ELV = PMFactory.genDirectDebitPayment(accountHolder
-							.getText().toString(), accountNumber.getText()
-							.toString(), bankNumber.getText().toString(),
-							directDebitCountry);
+				if (ElvValidator.validate(getActivity(), accountHolder,
+						accountNumber, bankNumber)) {
+					PMPaymentMethod ELV = PMFactory.genDirectDebitPayment(
+							accountHolder.getText().toString(), accountNumber
+									.getText().toString(), bankNumber.getText()
+									.toString(), directDebitCountry);
 					triggerButton.setEnabled(false);
 					((PaymentActivity) getActivity()).startRequest(ELV);
 				}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pm_list_selector"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/paymentItemMarginSide"
+    android:paddingRight="@dimen/paymentItemMarginSide"
+    android:paddingTop="@dimen/paymentItemMarginSide" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:id="@+id/cardNumberSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="7"
+            android:textSize="@dimen/paymentItemCardNumberSize" />
+
+        <ImageView
+            android:id="@+id/cardLogoSave"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/paymentItemImageSize"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="@dimen/paymentItemMarginSide"
+            android:layout_weight="3"
+            android:contentDescription="@string/pm_card_logo_description" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/paymentItemSeparatorMargin"
+        android:background="@color/buttonDefaultColor" >
+    </LinearLayout>
+
+</LinearLayout>

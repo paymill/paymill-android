@@ -97,12 +97,14 @@ public class DetailsObject implements Parcelable {
 		detail.setCreatedAt(transaction.getCreatedAt().getTime());
 		detail.setDescription(transaction.getDescription());
 		detail.setStatusCode(transaction.getStatus());
-		detail.setPaymentType(transaction.getPayment().getType());
-		detail.setCreditCardLast4(transaction.getPayment().getLast4());
-		detail.setCardType(transaction.getPayment().getCardType());
-		detail.setAccountNumber(transaction.getPayment().getAccount());
-		detail.setBankCode(transaction.getPayment().getCode());
-
+		if (transaction.getPayment() != null) {
+			// payment object is not available when coming from a list
+			detail.setPaymentType(transaction.getPayment().getType());
+			detail.setCreditCardLast4(transaction.getPayment().getLast4());
+			detail.setCardType(transaction.getPayment().getCardType());
+			detail.setAccountNumber(transaction.getPayment().getAccount());
+			detail.setBankCode(transaction.getPayment().getCode());
+		}
 		return detail;
 	}
 
@@ -117,12 +119,13 @@ public class DetailsObject implements Parcelable {
 		detail.setCurrency("EUR");
 		detail.setCreatedAt(preauthorization.getCreatedAt().getTime());
 		detail.setStatusCode(preauthorization.getStatus());
-		detail.setPaymentType(preauthorization.getPayment().getType());
-		detail.setCreditCardLast4(preauthorization.getPayment().getLast4());
-		detail.setCardType(preauthorization.getPayment().getCardType());
-		detail.setAccountNumber(preauthorization.getPayment().getAccount());
-		detail.setBankCode(preauthorization.getPayment().getCode());
-
+		if (preauthorization.getPayment() != null) {
+			detail.setPaymentType(preauthorization.getPayment().getType());
+			detail.setCreditCardLast4(preauthorization.getPayment().getLast4());
+			detail.setCardType(preauthorization.getPayment().getCardType());
+			detail.setAccountNumber(preauthorization.getPayment().getAccount());
+			detail.setBankCode(preauthorization.getPayment().getCode());
+		}
 		return detail;
 	}
 

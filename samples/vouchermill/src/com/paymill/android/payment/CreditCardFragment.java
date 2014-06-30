@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,11 +52,16 @@ public class CreditCardFragment extends Fragment {
 	}
 
 	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			final Bundle savedInstanceState) {
 		pmSettings = getArguments().getParcelable(
 				PaymentActivity.ARGUMENT_SETTINGS);
-
 		View v = inflater.inflate(R.layout.pm_credit_card_fragment, container,
 				false);
 
@@ -306,7 +310,6 @@ public class CreditCardFragment extends Fragment {
 			dateText.removeTextChangedListener(this);
 			dateCursor = dateText.getSelectionStart();
 			dateFormated(isDateDelete);
-			Log.d(FRAGMENT_TAG, formatedDate + " - " + dateCursor);
 			dateText.setText(formatedDate);
 			dateText.setSelection(dateCursor);
 			dateText.addTextChangedListener(this);

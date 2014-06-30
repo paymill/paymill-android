@@ -7,12 +7,12 @@
 	<parent>
 		<groupId>com.paymill.android.samples</groupId>
 		<artifactId>android-samples</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.2-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.paymill.android.samples</groupId>
 	<artifactId>vouchermill</artifactId>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 	<packaging>apk</packaging>
 	<name>VoucherMill</name>
 
@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>com.paymill.android</groupId>
 			<artifactId>android-sdk</artifactId>
-			<version>1.1</version>
+			<version>1.0</version>
 		</dependency>
 
 		<dependency>
@@ -96,6 +96,10 @@
 				<artifactId>android-maven-plugin</artifactId>
 				<version>3.6.1</version>
 				<configuration>
+					<androidManifestFile>${project.basedir}/AndroidManifest.xml</androidManifestFile>
+					<assetsDirectory>${project.basedir}/assets</assetsDirectory>
+					<resourceDirectory>${project.basedir}/res</resourceDirectory>
+					<nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
 					<sdk>
 						<platform>16</platform>
 					</sdk>

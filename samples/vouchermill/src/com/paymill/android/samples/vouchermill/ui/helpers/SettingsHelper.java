@@ -30,6 +30,7 @@ public class SettingsHelper {
 
 	private Settings settings;
 	private boolean autoConsume;
+	private boolean useSafeStore;
 	private String publicKey;
 	private ServiceMode serviceMode;
 	private SharedPreferences preferences;
@@ -55,6 +56,15 @@ public class SettingsHelper {
 
 	public void setAutoConsume(boolean autoConsume) {
 		this.autoConsume = autoConsume;
+		save();
+	}
+
+	public boolean isUseSafeStore() {
+		return useSafeStore;
+	}
+
+	public void setUseSafeStore(boolean useSafeStore) {
+		this.useSafeStore = useSafeStore;
 		save();
 	}
 

@@ -80,8 +80,9 @@
 
     <!-- Settings -->
     <string name="auto_consume_label">Auto Consume:</string>
-    <string name="auto_consume_on_radio_btn_text">On</string>
-    <string name="auto_consume_off_radio_btn_text">Off</string>
+    <string name="auto_consume_checkbox_label">Auto Consume</string>
+    <string name="use_safestore_label">Safe Store:</string>
+    <string name="use_safestore_checkbox_label">Enable</string>
     <string name="payment_methods_label">Payment method:</string>
     <string name="payment_method_chbx_credit_card">Credit card</string>
     <string name="payment_method_chbx_direct_debit">Direct debit</string>

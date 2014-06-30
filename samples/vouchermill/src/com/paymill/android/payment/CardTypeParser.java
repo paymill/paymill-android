@@ -2,11 +2,12 @@ package com.paymill.android.payment;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.util.Log;
 
 import com.paymill.android.samples.vouchermill.R;
 
@@ -56,8 +57,18 @@ public class CardTypeParser {
 	private static final List<Integer> MARKERS_POSITIONS_DEFAULT = Arrays
 			.asList(5, 10, 15, 20);
 
-	public static final String TAG = "CardTypeParser";
 
+	public static final Map<String, Integer> paymentStringToImageResource = new HashMap<String, Integer>() {{
+		put("visa", R.drawable.pm_visa);
+		put("mastercard", R.drawable.pm_mastercard);
+		put("amex", R.drawable.pm_american_express);
+		put("diners", R.drawable.pm_diners_club);
+		put("discover", R.drawable.pm_discover);
+		put("jcb", R.drawable.pm_jcb);
+		put("maestro", R.drawable.pm_maestro);
+		put("china_union_pay", R.drawable.pm_unionpay);
+	}};
+	
 	/**
 	 * Each card type accepted by PAYMILL.
 	 * 
@@ -198,7 +209,6 @@ public class CardTypeParser {
 				cardType.cardMatcher.reset(cardNumber);
 
 				if (cardType.cardMatcher.find()) {
-					Log.d(TAG, cardType.name());
 					return cardType;
 				}
 
@@ -214,7 +224,6 @@ public class CardTypeParser {
 				}
 
 			}
-			Log.d(TAG, Boolean.toString(isValid));
 
 			if (isValid) {
 				return CardType.YetUnknown;

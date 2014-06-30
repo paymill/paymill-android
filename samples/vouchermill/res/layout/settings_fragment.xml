@@ -23,8 +23,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="@string/auto_consume_label" />
+            android:text="@string/auto_consume_checkbox_label" />
 
+        <TextView
+            android:id="@+id/useSafeStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_safestore_label" />
+
+        <CheckBox
+            android:id="@+id/checkboxUseSafeStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/use_safestore_checkbox_label" />
 
         <TextView
             android:id="@+id/paymentMethodLabel"

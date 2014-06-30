@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.EditText;
 
 import com.paymill.android.payment.CardTypeParser.CardType;
@@ -16,8 +15,6 @@ import com.paymill.android.samples.vouchermill.R;
 
 @SuppressLint("ResourceAsColor")
 public class CreditCardValidator {
-
-	private static final String TAG = "CreditCardValidator";
 
 	private static boolean validateIsEmpty(String field) {
 		return TextUtils.isEmpty(field);
@@ -46,7 +43,6 @@ public class CreditCardValidator {
 	public static boolean isValidCardType(Context context,
 			EditText creditCardNumber, CardType cardType) {
 		if (cardType == CardType.Invalid) {
-			Log.d(TAG, cardType.name());
 			creditCardNumber.setTextColor(context.getResources().getColor(
 					R.color.errorTextColor));
 			return false;
@@ -101,7 +97,6 @@ public class CreditCardValidator {
 		Matcher matcher;
 		matcher = datePattern.matcher(date);
 		boolean find = matcher.find();
-		Log.d(TAG, Boolean.toString(find));
 		return find;
 	}
 

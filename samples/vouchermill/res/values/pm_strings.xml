@@ -29,15 +29,40 @@
     <string name="pm_cc_holder_name_hint">Card holder</string>
     <string name="pm_cc_holder_name_label">Card holder</string>
     <string name="pm_cc_trigger_btn_default">@string/pm_trigger_default</string>
+    <!-- ChooseUsePayments -->
+    <string name="pm_choose_use_payments">Do you want to use available credit card or direct debit payments?</string>
+    <string name="pm_yes_choose_use_payments">Yes</string>
+    <string name="pm_no_choose_use_payments">No</string>
+    <string name="pm_reset_choose_use_payments">Reset Password</string>
+    <!-- ChooseSavePayment -->
+    <string name="pm_choose_save_payment">Do you want to save this payment?</string>
+    <string name="pm_save_payment_pin">Password</string>
+    <string name="pm_yes_choose_save_payment">Yes</string>
+    <string name="pm_no_choose_save_payment">No</string>
+    <!-- PaymentsAvailable -->
+    <string name="pm_choose_payment">Choose credit card or direct debit payment</string>
+    <string name="pm_choose_payment_new_text">Add New\.\.\.</string>
+    <string name="pm_card_logo_description">Card logo</string>
+    <string name="pm_card_logo_del_description">Delete Card</string>
+    <string name="pm_cc_stars">****&#160;****&#160;****&#160;</string>
+
     <!-- Main / Shared -->
     <string name="pm_dateExpiredMSG">Card expired</string>
     <string name="pm_badCardFormatMSG">Card number not valid</string>
     <string name="pm_emptyMSG">Field cannot be empty</string>
     <string name="pm_notAllowedCardMSG">Card type is not supported</string>
     <string name="pm_credit_card_button">Credit Card</string>
+    <string name="pm_elv_button">Direct Debit</string>
     <string name="pm_direct_debit_button">Direct Debit</string>
     <string name="pm_trigger_payment">Pay</string>
     <string name="pm_trigger_preauth">Authorize</string>
     <string name="pm_trigger_default">Pay</string>
+
+    <!-- SafeStore Messages -->
+    <string name="pm_payments_not_reset">There was an error. The payments for the device were not reset.</string>
+    <string name="pm_payments_reset">Payments for the device were successfully reset.</string>
+    <string name="pm_list_payments_failed">List payments failed. Please try again.</string>
+    <string name="pm_reset_payments">Password was successfully reset.</string>
+    <string name="pm_reset_payments_failed">There was a problem. Password was not successfully reset.</string>
 
 </resources>

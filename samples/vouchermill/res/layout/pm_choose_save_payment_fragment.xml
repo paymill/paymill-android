@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/chooseSavePayment"
+        style="@style/labelStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/chooserItemMarginLeft"
+        android:layout_marginRight="@dimen/chooserItemMarginSide"
+        android:layout_marginTop="@dimen/chooserItemMarginTop"
+        android:text="@string/pm_choose_save_payment"
+        android:textColor="@color/Orange"
+        android:textSize="@dimen/safestoreChooserSize" />
+
+    <LinearLayout
+        android:id="@+id/savePaymentHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/chooserItemMarginLeft"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <com.paymill.android.payment.CustomEditText
+        android:id="@+id/savePaymentPin"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/chooserItemMarginSide"
+        android:layout_marginRight="@dimen/chooserItemMarginSide"
+        android:layout_marginTop="@dimen/chooserItemMarginTop"
+        android:hint="@string/pm_save_payment_pin"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/yesSavePayment"
+            style="@style/buttonStyle"
+            android:layout_width="@dimen/chooserButtonWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/chooserItemMarginSide"
+            android:text="@string/pm_yes_choose_save_payment" />
+
+        <Button
+            android:id="@+id/noSavePayment"
+            style="@style/buttonStyle"
+            android:layout_width="@dimen/chooserButtonWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/chooserItemMarginSide"
+            android:text="@string/pm_no_choose_save_payment" />
+    </LinearLayout>
+
+</LinearLayout>

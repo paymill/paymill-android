@@ -49,46 +49,49 @@ public abstract class VoucherDetailsFragment extends SherlockFragment {
 
 		((TextView) view.findViewById(R.id.statusCodeText))
 				.setText(detailsObject.getStatusCode());
+		if (detailsObject.getPaymentType() != null) {
+			// display payment information labels and text for credit card
+			if (detailsObject.getPaymentType().equals("creditcard")) {
+				((TextView) view.findViewById(R.id.field1Label))
+						.setText("Credit Card:");
 
-		// display payment information labels and text for credit card
-		if (detailsObject.getPaymentType().equals("creditcard")) {
-			((TextView) view.findViewById(R.id.field1Label))
-					.setText("Credit Card:");
+				if (detailsObject.getCardType().equals("diners")) {
+					((TextView) view.findViewById(R.id.field1Text))
+							.setText("xxxx-xxxxxx-"
+									+ detailsObject.getCreditCardLast4());
+				} else if (detailsObject.getCardType().equals("amex")) {
+					((TextView) view.findViewById(R.id.field1Text))
+							.setText("xxxx-xxxxxx-x"
+									+ detailsObject.getCreditCardLast4());
+				} else if (detailsObject.getCardType()
+						.equals("china_union_pay")) {
+					((TextView) view.findViewById(R.id.field1Text))
+							.setText("xxxxxx-xxxxxxxxx"
+									+ detailsObject.getCreditCardLast4());
+				} else {
+					((TextView) view.findViewById(R.id.field1Text))
+							.setText("xxxx-xxxx-xxxx-"
+									+ detailsObject.getCreditCardLast4());
+				}
 
-			if (detailsObject.getCardType().equals("diners")) {
-				((TextView) view.findViewById(R.id.field1Text))
-						.setText("xxxx-xxxxxx-"
-								+ detailsObject.getCreditCardLast4());
-			} else if (detailsObject.getCardType().equals("amex")) {
-				((TextView) view.findViewById(R.id.field1Text))
-						.setText("xxxx-xxxxxx-x"
-								+ detailsObject.getCreditCardLast4());
-			} else if (detailsObject.getCardType().equals("china_union_pay")) {
-				((TextView) view.findViewById(R.id.field1Text))
-						.setText("xxxxxx-xxxxxxxxx"
-								+ detailsObject.getCreditCardLast4());
-			} else {
-				((TextView) view.findViewById(R.id.field1Text))
-						.setText("xxxx-xxxx-xxxx-"
-								+ detailsObject.getCreditCardLast4());
+				((TextView) view.findViewById(R.id.field2Label))
+						.setText("Type:");
+				((TextView) view.findViewById(R.id.field2Text))
+						.setText(detailsObject.getCardType());
 			}
 
-			((TextView) view.findViewById(R.id.field2Label)).setText("Type:");
-			((TextView) view.findViewById(R.id.field2Text))
-					.setText(detailsObject.getCardType());
-		}
+			// display payment information labels and text for debit
+			if (detailsObject.getPaymentType().equals("debit")) {
+				((TextView) view.findViewById(R.id.field1Label))
+						.setText("Account:");
+				((TextView) view.findViewById(R.id.field1Text))
+						.setText(detailsObject.getAccountNumber());
 
-		// display payment information labels and text for debit
-		if (detailsObject.getPaymentType().equals("debit")) {
-			((TextView) view.findViewById(R.id.field1Label))
-					.setText("Account:");
-			((TextView) view.findViewById(R.id.field1Text))
-					.setText(detailsObject.getAccountNumber());
-
-			((TextView) view.findViewById(R.id.field2Label))
-					.setText("Bank code:");
-			((TextView) view.findViewById(R.id.field2Text))
-					.setText(detailsObject.getBankCode());
+				((TextView) view.findViewById(R.id.field2Label))
+						.setText("Bank code:");
+				((TextView) view.findViewById(R.id.field2Text))
+						.setText(detailsObject.getBankCode());
+			}
 		}
 
 		return view;

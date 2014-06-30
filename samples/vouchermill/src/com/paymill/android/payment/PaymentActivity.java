@@ -10,25 +10,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.Toast;
 
+import com.paymill.android.api.Payment;
 import com.paymill.android.api.Preauthorization;
 import com.paymill.android.api.Transaction;
 import com.paymill.android.factory.PMPaymentMethod;
 import com.paymill.android.factory.PMPaymentParams;
 import com.paymill.android.listener.PMGenerateTokenListener;
+import com.paymill.android.listener.PMListPaymentsListener;
+import com.paymill.android.listener.PMPaymentsAvailListener;
 import com.paymill.android.listener.PMPreauthListener;
+import com.paymill.android.listener.PMResetPaymentsListener;
 import com.paymill.android.listener.PMTransListener;
 import com.paymill.android.payment.CardTypeParser.CardType;
 import com.paymill.android.payment.PaymentActivity.Result.Type;
 import com.paymill.android.samples.vouchermill.R;
 import com.paymill.android.service.PMError;
+import com.paymill.android.service.PMError.SafeStoreError;
 import com.paymill.android.service.PMManager;
 import com.paymill.android.service.PMService;
 
@@ -108,138 +113,181 @@ public class PaymentActivity extends FragmentActivity {
 	private String merchantPublicKey;
 	private Settings pmSettings;
 	Bundle pmSettingsBundle;
+	Parcelable result;
+	private boolean isSafestoreEnabled;
 
-	FragmentManager fragmentManager = null;
-	private int selectedFragmentId = R.id.creditCardButton;
-	private static final String SELECTED_FRAGMENT_ID_KEY = "selectedfragment";
+	protected static final String DEBUG_TAG = "DEBUG_TAG";
+	private static final String RADIO_BUTTON_CHECKED_KEY = "RADIO_BUTTON_CHECKED";
+	private static final String ACTIVE_FRAGMENT_TAG_KEY = "activeFragmentTagKey";
+	public static final String PAYMENT_TYPE_CREDIT_CARD = "creditcard";
+	private static final String RADIO_GROUP_VISIBLE_KEY = "RADIO_GROUP_VISIBLE_KEY";
+	private static final String PASSWORD_KEY = "PASSWORD_KEY";
+	private static final String RESULT_KEY = "RESULT_KEY";
+
 	private RadioGroup radioGroup;
-	private FrameLayout creditCardLayout;
-	private FrameLayout directDebitLayout;
+	private String activeFragmentTag = "noFragment";
+
+	private CreditCardFragment creditCardFragment;
+	private DirectDebitFragment directDebitFragment;
+
+	private boolean actionWithPaymentTriggered;
+	public String password;
+	private ProgressDialogFragment progress;
+	private boolean showRadioGroup;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Bundle data = getIntent().getExtras();
 		// check arguments
-		params = data.getParcelable(ARGUMENT_PARAM);
-		if (params == null) {
-			wrongParams("No parameters supplied");
-		}
-		paymentType = data.getParcelable(ARGUMENT_TYPE);
-		if (paymentType == null) {
-			wrongParams("No type supplied");
-		}
-		if (paymentType == PaymentType.TOKEN
-				|| paymentType == PaymentType.TOKEN_WITH_PARAMS) {
-			resultType = Type.TOKEN;
-		} else if (paymentType == PaymentType.TRANSACTION
-				|| paymentType == PaymentType.PREAUTHORIZATION) {
-			resultType = Type.TRANSACTION;
-		} else {
-			wrongParams("No type supplied");
-		}
-		consumable = data.getBoolean(ARGUMENT_CONSUMABLE);
-		if (paymentType == PaymentType.TOKEN_WITH_PARAMS) {
-			mode = getModeFromOrdinal(data.getInt(ARGUMENT_MODE));
-			if (mode == null) {
-				wrongParams("Invalid mode supplied");
-			}
-			merchantPublicKey = data.getString(ARGUMENT_MERCHANT_PUBLIC_KEY);
-			if (TextUtils.isEmpty(merchantPublicKey)) {
-				wrongParams("Invalid merchant public key supplied");
-			}
-		}
-		pmSettings = data.getParcelable(ARGUMENT_SETTINGS);
-		if (pmSettings == null) {
-			wrongParams("No settings supplied");
-		}
-		boolean showGroup = false;
-		// check if we should show both
-		if (pmSettings.isCreditCardPaymentAllowed()
-				&& pmSettings.isDirectDebitPaymentAllowed()) {
-			showGroup = true;
-		}
-		pmSettingsBundle = new Bundle();
-		pmSettingsBundle.putParcelable(ARGUMENT_SETTINGS, pmSettings);
+		loadSettings(data);
+
+		this.setContentView(R.layout.pm_payment);
 
 		// add listeners
-		PMManager.addListener(generateTokenListener);
-		PMManager.addListener(preauthorizeListener);
-		PMManager.addListener(transactionListener);
-		this.setContentView(R.layout.pm_payment);
+		addListeners();
 
 		// set activity background
 		findViewById(R.id.ScrollView).getRootView().setBackgroundColor(
 				getResources().getColor(R.color.backgroundColor));
 
-		// check if screen rotated
-		fragmentManager = getSupportFragmentManager();
-		// add fragments
-		directDebitLayout = (FrameLayout) findViewById(R.id.directDebitLayout);
-		creditCardLayout = (FrameLayout) findViewById(R.id.creditCardLayout);
-		DirectDebitFragment directdebitFragment = (DirectDebitFragment) fragmentManager
-				.findFragmentById(R.id.directDebitLayout);
-		CreditCardFragment creditCardFragment = (CreditCardFragment) fragmentManager
-				.findFragmentById(R.id.creditCardLayout);
-		if (directdebitFragment == null) {
-			fragmentManager
-					.beginTransaction()
-					.add(R.id.directDebitLayout, DirectDebitFragment.instance(pmSettings),
-							DirectDebitFragment.FRAGMENT_TAG).commit();
-		}
-		if (creditCardFragment == null) {
-			fragmentManager
-					.beginTransaction()
-					.add(R.id.creditCardLayout,
-							CreditCardFragment.instance(pmSettings),
-							CreditCardFragment.FRAGMENT_TAG).commit();
-		}
 		// init radio group
 		radioGroup = (RadioGroup) findViewById(R.id.pmButtonGroup);
-		if (!showGroup) {
-			radioGroup.setVisibility(View.GONE);
-			// show the correct fragment
-			if (pmSettings.isCreditCardPaymentAllowed()) {
-				showFragment(R.id.creditCardButton);
-			} else {
-				showFragment(R.id.directDebitButton);
-			}
+
+		if (savedInstanceState == null) {
+			setupInitialLoadFragments();
 		} else {
-			radioGroup
-					.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-						@Override
-						public void onCheckedChanged(RadioGroup group,
-								int checkedId) {
-							showFragment(checkedId);
-						}
-					});
-			int selected = savedInstanceState != null ? savedInstanceState
-					.getInt(SELECTED_FRAGMENT_ID_KEY, R.id.creditCardButton)
-					: R.id.creditCardButton;
-			radioGroup.check(selected);
-			showFragment(selected);
+			retrieveSavedInstanceData(savedInstanceState);
 		}
 
+		radioGroup.setOnCheckedChangeListener(checkChangedListener);
 	}
 
-	private void showFragment(int fragmentId) {
-		switch (fragmentId) {
-		case R.id.creditCardButton:
-			creditCardLayout.setVisibility(View.VISIBLE);
-			directDebitLayout.setVisibility(View.GONE);
+	private void addListeners() {
+		PMManager.addListener(resetPaymentsListener);
+		PMManager.addListener(arePaymentsAvailablelistener);
+		PMManager.addListener(listPaymentsListener);
+		PMManager.addListener(generateTokenListener);
+		PMManager.addListener(preauthorizeListener);
+		PMManager.addListener(transactionListener);
+	}
+
+	private void loadSettings(Bundle data) {
+		params = data.getParcelable(ARGUMENT_PARAM);
+		paymentType = data.getParcelable(ARGUMENT_TYPE);
+		consumable = data.getBoolean(ARGUMENT_CONSUMABLE);
+		pmSettings = data.getParcelable(ARGUMENT_SETTINGS);
+		isSafestoreEnabled = pmSettings.isSafeStoreEnabled();
+		pmSettingsBundle = new Bundle();
+		pmSettingsBundle.putParcelable(ARGUMENT_SETTINGS, pmSettings);
+
+		if (params == null) {
+			wrongParams("No parameters supplied");
+		}
+
+		switch (paymentType) {
+		case TRANSACTION:
+			resultType = Type.TRANSACTION;
 			break;
-		case R.id.directDebitButton:
-			creditCardLayout.setVisibility(View.GONE);
-			directDebitLayout.setVisibility(View.VISIBLE);
+		case PREAUTHORIZATION:
+			resultType = Type.TRANSACTION;
+			break;
+		case TOKEN:
+			resultType = Type.TOKEN;
+			break;
+		case TOKEN_WITH_PARAMS:
+			resultType = Type.TOKEN;
+			setMerchantPublicKey(data.getInt(ARGUMENT_MODE),
+					data.getString(ARGUMENT_MERCHANT_PUBLIC_KEY));
 			break;
 		default:
-			throw new IllegalArgumentException("Unkown id:" + fragmentId);
+			wrongParams("Wrong type supplied");
+			break;
+		}
+
+		if (pmSettings == null) {
+			wrongParams("No settings supplied");
+		}
+	}
+
+	private void setMerchantPublicKey(int argumentMode, String mPublicKey) {
+		mode = getModeFromOrdinal(argumentMode);
+		if (mode == null) {
+			wrongParams("Invalid mode supplied");
+		}
+		merchantPublicKey = mPublicKey;
+		if (TextUtils.isEmpty(merchantPublicKey)) {
+			wrongParams("Invalid merchant public key supplied");
+		}
+	}
+
+	private void setupInitialLoadFragments() {
+		if (isSafestoreEnabled
+				&& (paymentType == PaymentType.TRANSACTION || paymentType == PaymentType.PREAUTHORIZATION)) {
+			PMManager.arePaymentsAvailable(getApplicationContext());
+			showProgress();
+		} else {
+			addNewPaymentFragment();
+		}
+	}
+
+	private void retrieveSavedInstanceData(Bundle savedInstanceState) {
+		password = savedInstanceState.getString(PASSWORD_KEY);
+		result = savedInstanceState.getParcelable(RESULT_KEY);
+		showRadioGroup = savedInstanceState.getBoolean(RADIO_GROUP_VISIBLE_KEY);
+		showHideGroup(showRadioGroup);
+		activeFragmentTag = savedInstanceState
+				.getString(ACTIVE_FRAGMENT_TAG_KEY);
+		radioGroup.check(savedInstanceState.getInt(RADIO_BUTTON_CHECKED_KEY));
+	}
+
+	private OnCheckedChangeListener checkChangedListener = new OnCheckedChangeListener() {
+		public void onCheckedChanged(RadioGroup group, int checkedId) {
+			if (checkedId == R.id.creditCardButton) {
+				creditCardFragment = (CreditCardFragment) getSupportFragmentManager()
+						.findFragmentByTag(CreditCardFragment.FRAGMENT_TAG);
+				if (creditCardFragment == null) {
+					creditCardFragment = CreditCardFragment
+							.instance(pmSettings);
+				}
+				replaceFragments(creditCardFragment,
+						CreditCardFragment.FRAGMENT_TAG);
+
+			} else {
+				directDebitFragment = (DirectDebitFragment) getSupportFragmentManager()
+						.findFragmentByTag(DirectDebitFragment.FRAGMENT_TAG);
+				if (directDebitFragment == null) {
+					directDebitFragment = DirectDebitFragment
+							.instance(pmSettings);
+				}
+				replaceFragments(directDebitFragment,
+						DirectDebitFragment.FRAGMENT_TAG);
+			}
+
+		}
+	};
+
+	void showHideGroup(boolean showGroup) {
+		showRadioGroup = showGroup;
+		if (!showGroup) {
+			radioGroup.setVisibility(View.GONE);
+		} else {
+			radioGroup.setVisibility(View.VISIBLE);
+		}
+	}
+
+	void replaceFragments(Fragment fragment, String fragmentTag) {
+		if (!activeFragmentTag.equals(fragmentTag)) {
+			activeFragmentTag = fragmentTag;
+			getSupportFragmentManager().beginTransaction()
+					.replace(R.id.fragmentHolder, fragment, fragmentTag)
+					.addToBackStack(fragment.getClass().getName()).commit();
 		}
 	}
 
 	void startRequest(PMPaymentMethod method) {
-		new ProgressDialogFragment().show(getSupportFragmentManager(),
-				ProgressDialogFragment.TAG);
+		showProgress();
+		actionWithPaymentTriggered = false;
 		switch (this.paymentType) {
 		case TOKEN:
 			generateToken(method);
@@ -252,6 +300,21 @@ public class PaymentActivity extends FragmentActivity {
 			break;
 		case TRANSACTION:
 			newTransaction(method);
+			break;
+		default:
+			wrongParams("Invalid type");
+		}
+	}
+
+	void startRequestWithPayment(String paymentId) {
+		showProgress();
+		actionWithPaymentTriggered = true;
+		switch (this.paymentType) {
+		case PREAUTHORIZATION:
+			newPreauthorizationWithPayment(paymentId);
+			break;
+		case TRANSACTION:
+			newTransactionWithPayment(paymentId);
 			break;
 		default:
 			wrongParams("Invalid type");
@@ -288,17 +351,102 @@ public class PaymentActivity extends FragmentActivity {
 
 		@Override
 		public void onTransaction(Transaction transaction) {
-			success(transaction);
-			finish();
+			dismissProgress();
+			if (actionWithPaymentTriggered || !isSafestoreEnabled) {
+				success(transaction);
+			} else {
+				result = transaction;
+				showHideGroup(false);
+				replaceFragments(ChooseSavePaymentFragment.instance(transaction
+						.getPayment()), ChooseSavePaymentFragment.FRAGMENT_TAG);
+			}
 		}
 
 		@Override
 		public void onTransactionFailed(PMError error) {
+			dismissProgress();
 			failure(error);
 			finish();
 		}
 
 	};
+
+	private PMResetPaymentsListener resetPaymentsListener = new PMResetPaymentsListener() {
+
+		@Override
+		public void onResetPaymentsFailed(PMError error) {
+			dismissProgress();
+			Toast f = Toast.makeText(getApplicationContext(), getResources()
+					.getString(R.string.pm_payments_not_reset),
+					Toast.LENGTH_LONG);
+			f.show();
+			addNewPaymentFragment();
+		}
+
+		@Override
+		public void onResetPayments(boolean result) {
+			dismissProgress();
+			Toast f = Toast.makeText(getApplicationContext(), getResources()
+					.getString(R.string.pm_payments_reset), Toast.LENGTH_LONG);
+			f.show();
+			addNewPaymentFragment();
+		}
+	};
+
+	private PMPaymentsAvailListener arePaymentsAvailablelistener = new PMPaymentsAvailListener() {
+
+		@Override
+		public void onPaymentsAvaialableFailed(PMError error) {
+			dismissProgress();
+			addNewPaymentFragment();
+		}
+
+		@Override
+		public void onPaymentsAvaialable(boolean available) {
+			dismissProgress();
+			if (available) {
+				addChooseUsePaymentsFragment();
+			} else {
+				addNewPaymentFragment();
+			}
+		}
+	};
+
+	PMListPaymentsListener listPaymentsListener = new PMListPaymentsListener() {
+
+		@Override
+		public void onListPaymentsFailed(PMError error) {
+			dismissProgress();
+			password = null;
+			Toast f = Toast.makeText(getApplicationContext(), getResources()
+					.getString(R.string.pm_list_payments_failed),
+					Toast.LENGTH_LONG);
+			if (error.getSafeStoreError() == SafeStoreError.SAFE_STORE_BLOCKED) {
+				resetSafeStorePayments();
+			} else {
+				f.show();
+			}
+		}
+
+		@Override
+		public void onListPayments(Collection<Payment> payments) {
+			dismissProgress();
+			ArrayList<Payment> paymentsList = new ArrayList<Payment>(payments);
+			replaceFragments(PaymentsAvailableFragment.instance(paymentsList),
+					PaymentsAvailableFragment.FRAGEMNT_TAG);
+
+		}
+	};
+
+	public void newTransactionWithPayment(String paymentId) {
+		PMManager.transactionWithPayment(getApplicationContext(), paymentId,
+				params, consumable);
+	}
+
+	public void newPreauthorizationWithPayment(String paymentId) {
+		PMManager.preauthorizationWithPayment(getApplicationContext(),
+				paymentId, params, consumable);
+	}
 
 	public void newTransaction(PMPaymentMethod method) {
 		PMManager.transaction(PaymentActivity.this, method, params, consumable);
@@ -308,11 +456,22 @@ public class PaymentActivity extends FragmentActivity {
 
 		@Override
 		public void onPreauth(Transaction preauthorization) {
-			success(preauthorization);
+			dismissProgress();
+			if (actionWithPaymentTriggered || !isSafestoreEnabled) {
+				success(preauthorization);
+			} else {
+				result = preauthorization;
+				showHideGroup(false);
+				replaceFragments(
+						ChooseSavePaymentFragment.instance(preauthorization
+								.getPayment()),
+						ChooseSavePaymentFragment.FRAGMENT_TAG);
+			}
 		}
 
 		@Override
 		public void onPreauthFailed(PMError error) {
+			dismissProgress();
 			failure(error);
 		}
 
@@ -390,6 +549,9 @@ public class PaymentActivity extends FragmentActivity {
 	@Override
 	protected void onDestroy() {
 		// very important to remove the listeners, in order to release resources
+		PMManager.removeListener(arePaymentsAvailablelistener);
+		PMManager.removeListener(resetPaymentsListener);
+		PMManager.removeListener(listPaymentsListener);
 		PMManager.removeListener(generateTokenListener);
 		PMManager.removeListener(transactionListener);
 		PMManager.removeListener(preauthorizeListener);
@@ -398,8 +560,13 @@ public class PaymentActivity extends FragmentActivity {
 
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
+		outState.putParcelable(RESULT_KEY, result);
+		outState.putString(PASSWORD_KEY, password);
+		outState.putInt(RADIO_BUTTON_CHECKED_KEY,
+				radioGroup.getCheckedRadioButtonId());
+		outState.putString(ACTIVE_FRAGMENT_TAG_KEY, activeFragmentTag);
+		outState.putBoolean(RADIO_GROUP_VISIBLE_KEY, showRadioGroup);
 		super.onSaveInstanceState(outState);
-		outState.putInt(SELECTED_FRAGMENT_ID_KEY, selectedFragmentId);
 	}
 
 	public PMPaymentParams getParams() {
@@ -809,6 +976,7 @@ public class PaymentActivity extends FragmentActivity {
 		private String verification;
 		private String accountNumber;
 		private String bankNumber;
+		private boolean safeStoreEnabled;
 
 		// cc and dd data
 		private String directDebitCountry;
@@ -819,6 +987,7 @@ public class PaymentActivity extends FragmentActivity {
 		 * allowed.
 		 */
 		public Settings() {
+			// add all card types by default
 			cardTypes.add(CardType.Visa);
 			cardTypes.add(CardType.Maestro);
 			cardTypes.add(CardType.MasterCard);
@@ -883,7 +1052,26 @@ public class PaymentActivity extends FragmentActivity {
 		 */
 		public void disableCreditCardType(CardType cardType) {
 			cardTypes.remove(cardType);
-			checkConsistent();
+			// checkConsistent();
+		}
+
+		/**
+		 * Is Safe store enabled
+		 * 
+		 * @return true if enabled, false otherwise
+		 */
+		public boolean isSafeStoreEnabled() {
+			return safeStoreEnabled;
+		}
+
+		/**
+		 * Enables or disables the Safe Store
+		 * 
+		 * @param safeStoreEnabled
+		 *            if Safe Store payments should be enabled
+		 */
+		public void setSafeStoreEnabled(boolean safeStoreEnabled) {
+			this.safeStoreEnabled = safeStoreEnabled;
 		}
 
 		/**
@@ -918,7 +1106,7 @@ public class PaymentActivity extends FragmentActivity {
 		 */
 		public void setDirectDebitCountry(String country) {
 			this.directDebitCountry = country;
-			checkConsistent();
+			// checkConsistent();
 		}
 
 		/**
@@ -1021,6 +1209,7 @@ public class PaymentActivity extends FragmentActivity {
 			verification = source.readString();
 			accountNumber = source.readString();
 			bankNumber = source.readString();
+			safeStoreEnabled = source.readInt() > 0 ? true : false;
 		}
 
 		@Override
@@ -1041,6 +1230,7 @@ public class PaymentActivity extends FragmentActivity {
 			dest.writeString(verification);
 			dest.writeString(accountNumber);
 			dest.writeString(bankNumber);
+			dest.writeInt(safeStoreEnabled ? 1 : 0);
 
 		}
 
@@ -1063,13 +1253,67 @@ public class PaymentActivity extends FragmentActivity {
 						+ " cannot be enabled!");
 			}
 		}
+	}
 
-		private void checkConsistent() {
-			if (!isCreditCardPaymentAllowed() && !isDirectDebitPaymentAllowed()) {
-				throw new IllegalArgumentException(
-						"Invalid settings, either direct debit or credit card must be enabled");
+	public void loadPaymentsList() {
+		showProgress();
+		PMManager.listPayments(getApplicationContext(), password);
+	}
+
+	public void addChooseUsePaymentsFragment() {
+		ChooseUsePaymentsFragment chooseUsePaymentsFragment = ChooseUsePaymentsFragment
+				.instance();
+		showHideGroup(false);
+		replaceFragments(chooseUsePaymentsFragment,
+				ChooseUsePaymentsFragment.FRAGMENT_TAG);
+	}
+
+	public void resetSafeStorePayments() {
+		showProgress();
+		PMManager.resetPayments(getApplicationContext());
+	}
+
+	public void addNewPaymentFragment() {
+		Fragment newFragment;
+		String fragmentTag;
+		if (pmSettings.isCreditCardPaymentAllowed()) {
+			if (creditCardFragment == null) {
+				creditCardFragment = CreditCardFragment.instance(pmSettings);
 			}
-		}
+			newFragment = (Fragment) creditCardFragment;
+			fragmentTag = CreditCardFragment.FRAGMENT_TAG;
 
+		} else {
+			if (directDebitFragment == null) {
+				directDebitFragment = DirectDebitFragment.instance(pmSettings);
+			}
+			newFragment = (Fragment) directDebitFragment;
+			fragmentTag = DirectDebitFragment.FRAGMENT_TAG;
+		}
+		if (pmSettings.isCreditCardPaymentAllowed()
+				&& pmSettings.isDirectDebitPaymentAllowed()) {
+			showRadioGroup = true;
+		}
+		showHideGroup(showRadioGroup);
+		replaceFragments(newFragment, fragmentTag);
+	}
+
+	private void showProgress() {
+		if (progress == null) {
+			progress = new ProgressDialogFragment();
+		}
+		progress.show(getSupportFragmentManager(), ProgressDialogFragment.TAG);
+	}
+
+	private void dismissProgress() {
+		if (progress != null) {
+			progress.dismiss();
+		}
+	}
+
+	public void finishSuccess() {
+		if (result != null) {
+			success(result);
+		}
 	}
 }

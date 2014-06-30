@@ -1,6 +1,7 @@
 package com.paymill.android.samples.vouchermill.ui.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class SettingsFragment extends SherlockFragment {
 	private static Settings settings;
 	View view;
 	CheckBox autoConsumeCheckBox;
+	CheckBox useSafeStoreCheckBox;
 	RadioGroup countriesRadioGroup;
 	RadioButton germanyRadioBtn;
 	CheckBox paymentMethodCCCheckBox;
@@ -49,6 +51,8 @@ public class SettingsFragment extends SherlockFragment {
 		// Initialize fields
 		autoConsumeCheckBox = ((CheckBox) view
 				.findViewById(R.id.checkboxAutoConsume));
+		useSafeStoreCheckBox = ((CheckBox) view
+				.findViewById(R.id.checkboxUseSafeStore));
 		germanyRadioBtn = ((RadioButton) view
 				.findViewById(R.id.radioButtonGermany));
 		countriesRadioGroup = ((RadioGroup) view
@@ -94,6 +98,9 @@ public class SettingsFragment extends SherlockFragment {
 			paymentMethodDDCheckBox.setChecked(false);
 			disableCountryFields(view);
 		}
+		if (!settings.isSafeStoreEnabled()) {
+			useSafeStoreCheckBox.setChecked(false);
+		}
 		autoConsumeCheckBox.setChecked(SettingsHelper
 				.getInstance(getActivity()).isAutoConsume());
 		autoConsumeCheckBox
@@ -135,6 +142,8 @@ public class SettingsFragment extends SherlockFragment {
 							disableCountryFields(view);
 							if (!paymentMethodCCCheckBox.isChecked()) {
 								paymentMethodCCCheckBox.setChecked(true);
+								Log.d("test", "1 - "
+										+ settings.getCardTypes().size());
 							}
 						}
 					}
@@ -205,15 +214,6 @@ public class SettingsFragment extends SherlockFragment {
 	public void onPause() {
 		// Save all the settings
 
-		// Payment Method
-		// Is credit card enabled is saved based on the card fields state
-		// Is direct debit enabled is saved based on its checkbox
-		if (paymentMethodDDCheckBox.isChecked() && germanyRadioBtn.isChecked()) {
-			settings.setDirectDebitCountry("DE");
-		} else {
-			settings.disableDirectDebit();
-		}
-
 		// Card Types
 		// If all credit cards are disabled is credit card allowed will return
 		// false. (if credit card checkbox is false all credit card types are
@@ -276,6 +276,33 @@ public class SettingsFragment extends SherlockFragment {
 			settings.enableCreditCardType(CardType.Laser);
 		} else {
 			settings.disableCreditCardType(CardType.Laser);
+		}
+		
+		settings.setSafeStoreEnabled(useSafeStoreCheckBox.isChecked());
+		
+		if (!cardTypeVisaCheckBox.isChecked()
+				&& !cardTypeMasterCardCheckBox.isChecked()
+				&& !cardTypeMaestroCheckBox.isChecked()
+				&& !cardTypeAmericanExpressCheckBox.isChecked()
+				&& !cardTypeJCBCheckBox.isChecked()
+				&& !cardTypeDinersClubCheckBox.isChecked()
+				&& !cardTypeDiscoverCheckBox.isChecked()
+				&& !cardTypeUnionPayCheckBox.isChecked()
+				&& !cardTypeInstaPaymentCheckBox.isChecked()
+				&& !cardTypeLaserCheckBox.isChecked()) {
+			disableCardFields(view);
+			if (!paymentMethodDDCheckBox.isChecked()) {
+				paymentMethodDDCheckBox.setChecked(true);
+			}
+		}
+
+		// Payment Method
+		// Is credit card enabled is saved based on the card fields state
+		// Is direct debit enabled is saved based on its checkbox
+		if (paymentMethodDDCheckBox.isChecked() && germanyRadioBtn.isChecked()) {
+			settings.setDirectDebitCountry("DE");
+		} else {
+			settings.disableDirectDebit();
 		}
 
 		SettingsHelper.getInstance(getActivity()).setSettings(settings);

@@ -5,6 +5,7 @@ import java.util.Collection;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.paymill.android.api.Payment;
 import com.paymill.android.api.Preauthorization;
 import com.paymill.android.api.Transaction;
 import com.paymill.android.listener.PMBackgroundListener;
@@ -188,5 +189,65 @@ public class BackgroundListener implements PMBackgroundListener {
 		if (SettingsHelper.getInstance(context).isAutoConsume()) {
 			PMManager.consumeTransaction(context, transaction);
 		}
+	}
+
+	@Override
+	public void onPaymentSaved(Payment payment) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPaymentSavedFailed(PMError error) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onListPayments(Collection<Payment> payments) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onListPaymentsFailed(PMError error) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onResetPayments(boolean result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onResetPaymentsFailed(PMError error) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPaymentsAvaialable(boolean available) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPaymentsAvaialableFailed(PMError error) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPaymentDeleted(Payment payment) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onPaymentDeletedFailed(PMError error) {
+		// TODO Auto-generated method stub
+		
 	}
 }

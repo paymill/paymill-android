@@ -30,16 +30,19 @@
     <color name="switchButtonRightNotPressedStrokeColor">#891C1C</color>
     <color name="switchButtonLeftPressedStrokeColor">#891C1C</color>
     <color name="switchButtonRightPressedStrokeColor">#891C1C</color>
+    
+    <!-- SafeStore colors -->
+    <color name="paymentRowSelectedColor">#FFEF5322</color>
 
     <!-- Dimensions -->
     <!-- Button Dimensions -->
     <dimen name="buttonDefaultStrokeWidth">1dp</dimen>
     <dimen name="buttonDefaultCornerRadius">5dp</dimen>
-	<dimen name="buttonPressedStrokeWidth">1dp</dimen>
+    <dimen name="buttonPressedStrokeWidth">1dp</dimen>
     <dimen name="buttonPressedCornerRadius">5dp</dimen>
     <dimen name="buttonVerticalPadding">5dp</dimen>
     <dimen name="buttonHorizontalPadding">10dp</dimen>
-    
+
     <!-- SwitchButton Dimensions -->
     <dimen name="switchButtonLeftNotPressedStrokeWidth">1dp</dimen>
     <dimen name="switchButtonRightNotPressedStrokeWidth">1dp</dimen>
@@ -47,12 +50,32 @@
     <dimen name="switchButtonRightPressedStrokeWidth">1dp</dimen>
     <dimen name="switchButtonVerticalPadding">5dp</dimen>
     <dimen name="switchButtonHorizontalPadding">10dp</dimen>
-    
+
     <!-- EditText Dimensions -->
     <dimen name="customEditTextVerticalPadding">3dp</dimen>
-	<dimen name="customEditTextHorizontalPadding">8dp</dimen>
-	
-	<!-- Styles -->
+    <dimen name="customEditTextHorizontalPadding">8dp</dimen>
+
+    <!-- Safestore Chooser Dimensions -->
+    <dimen name="safestoreChooserSize">18sp</dimen>
+    <dimen name="chooserItemMarginTop">15dp</dimen>
+    <dimen name="chooserItemMarginBottom">15dp</dimen>
+    <dimen name="chooserItemMarginSide">5dp</dimen>
+    <dimen name="chooserItemMarginLeft">12dp</dimen>
+    <dimen name="chooserButtonWidth">100dp</dimen>
+    <dimen name="chooserButtonWidthReset">210dp</dimen>
+
+    <!-- PaymentItem Dimensions -->
+    <dimen name="paymentItemMarginSide">5dp</dimen>
+    <dimen name="paymentItemImageSize">32dp</dimen>
+    <dimen name="paymentItemSeparatorMargin">2dp</dimen>
+    <dimen name="paymentItemMarginTop">20dp</dimen>
+    <dimen name="paymentItemInnerMargin">5dp</dimen>
+    <dimen name="paymentItemHolderNameSize">25dp</dimen>
+    <dimen name="paymentItemLogoWidth">75dp</dimen>
+    <dimen name="paymentItemLogoHeight">25dp</dimen>
+    <dimen name="paymentItemCardNumberSize">16dp</dimen>
+
+    <!-- Styles -->
     <style name="buttonStyle">
         <item name="android:background">@drawable/pm_button_background</item>
         <item name="android:textColor">@color/buttonTextColor</item>

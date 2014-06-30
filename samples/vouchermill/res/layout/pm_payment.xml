@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/backgroundColor"
     android:windowSoftInputMode="stateHidden" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
@@ -15,7 +15,8 @@
             android:id="@+id/pmButtonGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:visibility="gone" >
 
             <RadioButton
                 android:id="@+id/creditCardButton"
@@ -23,11 +24,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/pm_switch_button_left"
                 android:button="@null"
                 android:checked="true"
                 android:gravity="center"
-                android:text="@string/pm_credit_card_button" 
-                android:background="@drawable/pm_switch_button_left"/>
+                android:saveEnabled="false"
+                android:text="@string/pm_credit_card_button" />
 
             <RadioButton
                 android:id="@+id/directDebitButton"
@@ -42,14 +44,7 @@
         </RadioGroup>
 
         <FrameLayout
-            android:id="@+id/creditCardLayout"
-            android:name="com.paymill.android.payment.CreditCardFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <FrameLayout
-            android:id="@+id/directDebitLayout"
-            android:name="com.paymill.android.payment.DirectDebitFragment"
+            android:id="@+id/fragmentHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
