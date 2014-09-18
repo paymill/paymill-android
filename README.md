@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-   compile 'com.paymill.android:android-sdk:1.1'
+   compile 'com.paymill.android:android-sdk:1.2.0'
 }       
 ```
 
