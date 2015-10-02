@@ -6,12 +6,7 @@ The Android SDK provides a flexible and easy to integrate payment solution for y
 ## Sample App
 
 
-<a href="https://play.google.com/store/apps/details?id=com.paymill.android.samples.vouchermill">
-  <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-</a>
-
-Our open source sample / demo app [VoucherMill](/samples/vouchermill) is available for download on Google Play. 
+View our open source sample / demo app [VoucherMill](/samples/vouchermill). 
  
 ## Getting started
 
