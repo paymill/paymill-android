@@ -1,11 +1,6 @@
 # VoucherMill
 The PAYMILL Android SDK Sample / Demo App
 
-<a href="https://play.google.com/store/apps/details?id=com.paymill.android.samples.vouchermill">
-  <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-</a>
-
 ## Using the payment screens
 
 
