@@ -67,7 +67,7 @@ If you haven't already, you will need to add the `INTERNET` permission  to your 
 
 ### Listeners
 
-The class [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html)exposes all the functionalities of the SDK trough static methods. The methods are asynchronous, return immediately and are thread-safe. Before calling a method, you should register a listener to receive the result. There are two types of listeners:
+The class [PMManager](http://paymill.github.io/paymill-android/docs/sdk/reference/com/paymill/android/service/PMManager.html) exposes all the functionalities of the SDK trough static methods. The methods are asynchronous, return immediately and are thread-safe. Before calling a method, you should register a listener to receive the result. There are two types of listeners:
 
 - **Foreground Listeners** can be added with the `addListener()` methods. Their callbacks are executed on the UI Thread and it is safe to modify UI elements from the callbacks.
 - **A BackgroundListener** is set with the `setBackgroundListener()` method. The callbacks are executed on a separate Thread. Use if for long running and/or critical operations. The execution of the callback holds the PMService in foreground mode, so make sure you return from the callback method at some point.
